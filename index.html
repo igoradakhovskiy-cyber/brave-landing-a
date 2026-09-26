@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Зарплата власника: калькулятор і розбір з радником | BRAVE Capital</title>
+<meta name="description" content="Порахуйте за 3 хвилини, скільки бізнес може платити вам щомісяця без шкоди обороту. Розбір результату з фінансовим радником — 20 хвилин, безкоштовно.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Скільки бізнес може платити вам щомісяця?">
+<meta property="og:description" content="Калькулятор зарплати власника від BRAVE Capital — 3 хвилини, результат одразу.">
+<meta property="og:image" content="assets/brand/logo.png">
+<link rel="icon" href="assets/brand/logo2-black.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400..800&family=Onest:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1669140901889164');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1669140901889164&ev=PageView&noscript=1" alt=""></noscript>
+<!-- End Meta Pixel. Подія Lead — при відправці будь-якої форми (див. track() і обробник submit) -->
+<style>
+:root{
+  --paper:#F2EFE9; --paper-2:#EAE5DC; --card:#FFFFFF; --ink:#0E0E0D; --ink-2:#34322F; --muted:#6F6A64;
+  --line:#E2DDD4; --line-2:#CFC8BC; --blue:#0045FF; --blue-deep:#0036CC; --blue-soft:#E7EDFF;
+  --seg-1:#B9B2A6; --seg-2:#DAD4C9; --seg-3:#0E0E0D; --seg-4:#0045FF;
+  --f-display:"Geologica","Onest",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-body:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-label:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r:6px; --r-lg:14px; --wrap:1200px; --gut:20px;
+  color-scheme: light;
+}
+@media (min-width:768px){ :root{ --gut:40px; } }
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+[hidden]{display:none !important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+
+/* type */
+.eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 18px;font:600 12.5px/1.3 var(--f-label);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{font-weight:700;color:var(--blue);font-variant-numeric:tabular-nums}
+.eyebrow::after{content:"";flex:1;max-width:120px;height:1px;background:var(--line-2)}
+.h1{font:800 clamp(34px,6.2vw,62px)/.98 var(--f-display);letter-spacing:-.025em;text-transform:uppercase;margin:0 0 22px;text-wrap:balance}
+.h2{font:780 clamp(28px,5vw,50px)/1.02 var(--f-display);letter-spacing:-.02em;text-transform:uppercase;margin:0 0 18px;text-wrap:balance}
+.h3{font:700 clamp(19px,2.2vw,22px)/1.25 var(--f-display);letter-spacing:-.01em;margin:0 0 8px}
+.blue{color:var(--blue)}
+.lead{font-size:clamp(17px,1.8vw,20px);line-height:1.55;color:var(--ink-2);max-width:62ch;margin:0 0 28px;text-wrap:pretty}
+.mono{font-family:var(--f-label)}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:16px 26px;border-radius:var(--r);
+  background:var(--blue);color:#fff;border:0;font:600 16px/1.2 var(--f-display);letter-spacing:.01em;text-decoration:none;cursor:pointer;
+  transition:background .15s ease, transform .15s ease}
+.btn:hover{background:var(--blue-deep)}
+.btn:active{transform:translateY(1px)}
+.btn .arr{font-family:var(--f-label);font-weight:500}
+.btn--ink{background:var(--ink)}
+.btn--ink:hover{background:#26241f}
+.btn--ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn--ghost:hover{background:var(--ink);color:var(--paper)}
+.btn--sm{min-height:42px;padding:10px 16px;font-size:14px}
+.btn--block{width:100%}
+.linkbtn{background:none;border:0;padding:6px 0;cursor:pointer;font:500 16px/1.3 var(--f-body);color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.linkbtn:hover{color:var(--blue)}
+.tag{display:inline-block;padding:4px 8px;border-radius:4px;background:var(--blue-soft);color:var(--blue);font:600 11px/1.2 var(--f-label);letter-spacing:.08em;text-transform:uppercase}
+
+/* review-mode markers for unconfirmed facts: ?review=1 */
+.todo{background:none}
+.review .todo{background:#FFF1B8;box-shadow:0 0 0 2px #FFF1B8;border-radius:2px;cursor:help}
+.review-only{display:none}
+.review .review-only{display:block}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(242,239,233,.86);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.hdr__in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.hdr__logo img{height:20px;width:auto}
+.hdr .btn{white-space:nowrap}
+@media (max-width:420px){ .hdr__logo img{height:17px} .hdr .btn{padding:10px 14px;font-size:13.5px} }
+.hdr__tag{display:none;font:500 11.5px/1 var(--f-label);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+@media (min-width:900px){ .hdr__tag{display:block} }
+
+/* sections */
+.sec{padding:clamp(64px,9vw,120px) 0}
+.sec--tight{padding:clamp(48px,7vw,88px) 0}
+.sec--white{background:var(--card)}
+.sec--ink{background:var(--ink);color:var(--paper)}
+.sec--ink .eyebrow{color:#A39E95}
+.sec--ink .eyebrow::after{background:#3B3934}
+.sec--ink .lead{color:#D6D1C9}
+
+/* HERO */
+.hero{padding:clamp(36px,6vw,80px) 0 clamp(56px,8vw,100px)}
+.hero__grid{display:grid;gap:40px}
+@media (min-width:980px){ .hero__grid{grid-template-columns:1.45fr 1fr;gap:56px;align-items:center} }
+.hero__cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.hero__micro{margin:16px 0 0;font:400 14px/1.5 var(--f-label);color:var(--muted)}
+.trust{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:34px;padding-top:22px;border-top:1px solid var(--line-2)}
+.trust div{display:flex;align-items:baseline;gap:8px;font:400 14px/1.3 var(--f-label);color:var(--muted)}
+.trust b{font:800 20px/1 var(--f-display);color:var(--ink);letter-spacing:-.01em}
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.mosaic figure{margin:0;position:relative;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;background:var(--paper-2)}
+.mosaic img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.mosaic figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 8px 7px;background:linear-gradient(transparent,rgba(14,14,13,.72));color:#fff;font:500 11.5px/1.25 var(--f-label)}
+.mosaic .stat-tile{display:flex;flex-direction:column;justify-content:flex-end;padding:12px;background:var(--blue);color:#fff}
+.mosaic .stat-tile b{font:800 clamp(28px,4vw,40px)/1 var(--f-display);letter-spacing:-.02em}
+.mosaic .stat-tile span{font:500 12.5px/1.3 var(--f-label);margin-top:6px;opacity:.92}
+@media (max-width:600px){ .mosaic figcaption{display:none} }
+.mosaic__cap{margin:12px 0 0;font:400 13.5px/1.5 var(--f-label);color:var(--muted)}
+.gs{filter:grayscale(1) contrast(1.04);transition:filter .3s ease}
+@media (hover:hover){ .gs:hover, figure:hover .gs{filter:none} }
+
+/* PAIN */
+.cards3{display:grid;gap:14px;margin-top:40px}
+@media (min-width:900px){ .cards3{grid-template-columns:repeat(3,1fr);gap:18px} }
+.pain{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 24px 24px;display:flex;flex-direction:column}
+.pain__n{font:600 12px/1 var(--f-label);color:var(--blue);letter-spacing:.1em;margin-bottom:18px}
+.pain p{margin:0 0 20px;color:var(--ink-2)}
+.quote{margin:auto 0 0;padding:16px 0 0;border-top:1px dashed var(--line-2)}
+.quote q{display:block;font:500 16px/1.45 var(--f-body);quotes:"«" "»";color:var(--ink)}
+.quote cite{display:block;margin-top:10px;font:400 13px/1.4 var(--f-label);font-style:normal;color:var(--muted)}
+.reframe{display:grid;gap:22px;margin-top:40px;padding:28px;border-radius:var(--r-lg);background:var(--ink);color:var(--paper);align-items:center}
+@media (min-width:760px){ .reframe{grid-template-columns:auto 1fr;padding:36px 40px;gap:32px} }
+.reframe img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 20%}
+.reframe p{margin:0;font:700 clamp(22px,3vw,32px)/1.18 var(--f-display);letter-spacing:-.015em;text-wrap:balance}
+.reframe cite{display:block;margin-top:14px;font:400 13.5px/1.4 var(--f-label);font-style:normal;color:#A39E95}
+.reframe small{display:block;margin-top:10px;font:400 15px/1.5 var(--f-body);color:#D6D1C9;max-width:60ch}
+
+/* SOLUTION */
+.sol{display:grid;gap:40px;margin-top:40px}
+@media (min-width:980px){ .sol{grid-template-columns:1fr 1fr;gap:64px;align-items:start} }
+.parts{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.parts li{display:grid;grid-template-columns:44px 1fr;gap:6px 14px;padding:18px 0;border-top:1px solid var(--line-2)}
+.parts li:last-child{border-bottom:1px solid var(--line-2)}
+.parts .n{font:600 13px/1.6 var(--f-label);color:var(--blue)}
+.parts h3{grid-column:2;margin:0;font:700 19px/1.3 var(--f-display)}
+.parts p{grid-column:2;margin:0;color:var(--ink-2);font-size:16px}
+.cutdemo{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 24px}
+.cutdemo__bar{display:flex;height:44px;border-radius:4px;overflow:hidden;margin:18px 0 8px}
+.cutdemo__bar i{display:block;height:100%}
+.cutdemo ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+.cutdemo li{display:grid;grid-template-columns:14px 1fr auto;gap:10px;align-items:center;font-size:15px}
+.cutdemo li s{width:14px;height:14px;border-radius:3px}
+.cutdemo li em{font:600 14px/1 var(--f-label);font-style:normal;color:var(--muted)}
+.why{display:grid;gap:14px;margin-top:56px}
+@media (min-width:760px){ .why{grid-template-columns:repeat(2,1fr)} }
+@media (min-width:1100px){ .why{grid-template-columns:repeat(4,1fr)} }
+.why article{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px}
+.why p{margin:0;color:var(--ink-2);font-size:15.5px}
+.why .quote q{font-size:14.5px}
+.roles{margin-top:40px;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line)}
+.roles div{display:grid;grid-template-columns:1fr;gap:2px;padding:16px 22px;background:var(--card);border-top:1px solid var(--line)}
+.roles div:first-child{border-top:0}
+@media (min-width:640px){ .roles div{grid-template-columns:220px 1fr;gap:20px;align-items:baseline} }
+.roles dt{font:600 12px/1.4 var(--f-label);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.roles dd{margin:0}
+.roles .me{background:var(--blue);color:#fff}
+.roles .me dt{color:#DCE5FF}
+.roles .me dd{font-weight:600}
+
+/* CALC */
+.calc-sec .h2{color:#fff}
+.calc-grid{display:grid;gap:36px;margin-top:8px}
+@media (min-width:1000px){ .calc-grid{grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start} }
+.calc-aside ul{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:14px}
+.calc-aside li{display:grid;grid-template-columns:22px 1fr;gap:12px;color:#D6D1C9}
+.calc-aside li::before{content:"→";font-family:var(--f-label);color:var(--blue);font-weight:600}
+.calc-aside .hero__micro{color:#A39E95}
+.calc .lead{color:var(--ink-2)}
+.calc{background:var(--card);color:var(--ink);border-radius:18px;padding:24px 20px 28px;min-height:520px}
+@media (min-width:560px){ .calc{padding:34px 34px 38px} }
+.tape{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.tape__track{flex:1;height:12px;border-radius:3px;background:var(--paper);position:relative;overflow:hidden;border:1px solid var(--line)}
+.tape__fill{position:absolute;inset:0 auto 0 0;background:var(--blue);width:0;transition:width .35s ease}
+.tape__track::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,rgba(14,14,13,.22) 1px,transparent 1px),linear-gradient(to right,rgba(14,14,13,.14) 1px,transparent 1px);background-size:10% 100%,2.5% 45%;background-repeat:repeat-x}
+.tape__n{font:500 11px/1 var(--f-label);letter-spacing:.1em;color:var(--muted);white-space:nowrap}
+.q{font:700 clamp(21px,2.6vw,26px)/1.22 var(--f-display);letter-spacing:-.01em;margin:0 0 8px;text-wrap:balance}
+.hint{color:var(--muted);font-size:14.5px;margin:0 0 20px;text-wrap:pretty}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;min-height:56px;padding:12px 16px;text-align:left;background:var(--card);border:1px solid var(--line-2);border-radius:var(--r);cursor:pointer;font-size:16px;transition:border-color .15s ease,background .15s ease}
+.opt:hover{border-color:var(--ink)}
+.opt::before{content:"";flex:none;width:16px;height:16px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--line-2);transition:box-shadow .15s ease}
+.opt[aria-pressed="true"]{border-color:var(--blue);background:var(--blue-soft)}
+.opt[aria-pressed="true"]::before{box-shadow:inset 0 0 0 5px var(--blue)}
+.cnav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:26px}
+.cnav .btn[disabled]{opacity:.3;cursor:not-allowed}
+.view{animation:vin .22s ease both}
+#cview [tabindex="-1"]:focus{outline:none}   /* фокус ставимо програмно для читалок екрана — рамка тут не потрібна */
+@keyframes vin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.intro-h{font:800 clamp(26px,3.6vw,36px)/1.08 var(--f-display);letter-spacing:-.02em;text-transform:uppercase;margin:0 0 14px}
+.rb{padding:22px 0;border-top:1px solid var(--line)}
+.rb:first-of-type{border-top:0;padding-top:4px}
+.big{font:800 clamp(42px,7vw,60px)/1 var(--f-display);letter-spacing:-.03em;margin:8px 0 6px}
+.big small{font:500 15px/1 var(--f-body);color:var(--muted);letter-spacing:0;margin-left:8px}
+.rb p{margin:8px 0 0}
+.note{background:#FFF6DB;border-radius:var(--r);padding:12px 14px;margin-top:14px;font-size:14.5px}
+.cut{display:flex;height:34px;border-radius:4px;overflow:hidden;position:relative;margin-top:16px}
+.cut i{display:block;height:100%}
+.cut::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,rgba(255,255,255,.55) 1px,transparent 1px),linear-gradient(to right,rgba(255,255,255,.55) 1px,transparent 1px);background-size:10% 100%,2% 36%;background-repeat:repeat-x}
+.ruler{display:flex;justify-content:space-between;font:400 11px/1 var(--f-label);color:var(--muted);margin-top:6px}
+.legend{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+.legend li{display:grid;grid-template-columns:12px 1fr auto;gap:10px;align-items:baseline;font-size:15px}
+.legend .sw{width:12px;height:12px;border-radius:2px;transform:translateY(1px)}
+.legend .pc{font:500 14px/1 var(--f-label)}
+.legend .amt{grid-column:2 / 4;font-size:13px;color:var(--muted);margin-top:-6px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.stat{border:1px solid var(--line);border-radius:var(--r);padding:12px}
+.stat .k{font:600 11px/1.3 var(--f-label);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.stat .v{font:700 20px/1.15 var(--f-display);margin-top:6px}
+@media (max-width:460px){
+  .stats{grid-template-columns:1fr;gap:8px}
+  .stat{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 14px}
+  .stat .v{margin-top:0;white-space:nowrap}
+}
+.qs{margin:12px 0 0;padding:0;list-style:none;counter-reset:q;display:grid;gap:12px}
+.qs li{counter-increment:q;display:grid;grid-template-columns:30px 1fr;gap:8px;font-size:15.5px}
+.qs li::before{content:counter(q, decimal-leading-zero);font:600 13px/1.6 var(--f-label);color:var(--blue)}
+.calc details{border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;margin-top:4px}
+.calc summary{cursor:pointer;font-weight:600}
+.calc details ol{margin:10px 0 0;padding-left:20px;font-size:14px;color:var(--ink-2)}
+.calc details li{margin-bottom:6px}
+.calc details p{font-size:13px;color:var(--muted)}
+.cover{margin-top:16px;padding:14px 16px 12px;border:1px solid var(--line);border-radius:var(--r)}
+.cover__top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:15px}
+.cover__top b{font:800 24px/1 var(--f-display);letter-spacing:-.01em}
+.cover__bar{height:10px;margin-top:10px;border-radius:3px;background:var(--paper);border:1px solid var(--line);overflow:hidden}
+.cover__bar i{display:block;height:100%;background:var(--ink)}
+.cover__legend{display:flex;justify-content:space-between;gap:12px;margin-top:6px;font:500 12.5px/1.3 var(--f-label);color:var(--muted)}
+.fixline{margin:12px 0 0;font-size:14.5px;color:var(--muted)}
+.fixline .linkbtn{font-size:14.5px;padding:0}
+.cbox{margin-top:22px;border-radius:var(--r-lg);background:var(--blue);color:#fff;padding:22px 20px}
+.cbox h3{font:800 22px/1.15 var(--f-display);text-transform:uppercase;letter-spacing:-.01em;margin:0 0 8px}
+.cbox p{margin:0 0 16px;opacity:.92}
+.cbox .btn{background:#fff;color:var(--blue)}
+.cbox .btn:hover{background:var(--paper)}
+.cbox .linkbtn{color:#fff}
+.cbox__row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px}
+
+/* HOW */
+.steps{list-style:none;margin:40px 0 0;padding:0;display:grid;gap:14px;counter-reset:s}
+@media (min-width:980px){ .steps{grid-template-columns:repeat(5,1fr);gap:12px} }
+.steps li{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 20px;display:flex;flex-direction:column;gap:10px}
+.steps .top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.steps .n{font:600 13px/1 var(--f-label);color:var(--blue)}
+.steps .t{font:500 13.5px/1.3 var(--f-label);color:var(--muted)}
+.steps h3{margin:0;font:700 18px/1.25 var(--f-display)}
+.steps p{margin:0;font-size:15px;color:var(--ink-2)}
+.steps li.paid{background:transparent;border-style:dashed}
+
+/* CASES */
+.cases{display:grid;gap:14px;margin-top:40px}
+@media (min-width:900px){ .cases{grid-template-columns:repeat(3,1fr);gap:18px} }
+.case{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column}
+.case__top{padding:22px 22px 18px;border-bottom:1px solid var(--line)}
+.case__meta{display:flex;justify-content:space-between;gap:10px;font:600 12px/1.3 var(--f-label);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.case__was{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:15px;color:var(--ink-2)}
+.case__was li::before{content:"— ";color:var(--muted)}
+.case__res{padding:20px 22px 24px;display:grid;gap:14px;flex:1;align-content:start}
+.case__res .lbl{font:600 11px/1 var(--f-label);letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.case__num b{display:block;font:800 clamp(30px,3.4vw,38px)/1 var(--f-display);letter-spacing:-.02em}
+.case__num span{display:block;margin-top:4px;font-size:14px;color:var(--muted)}
+.cases-more{margin-top:18px}
+.foot-note{margin:18px 0 0;font:400 14px/1.5 var(--f-label);color:var(--muted)}
+
+/* PROOF */
+.tst{display:grid;gap:14px;margin-top:40px}
+@media (min-width:900px){ .tst{grid-template-columns:repeat(2,1fr);gap:18px} }
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:grid;grid-template-columns:1fr}
+@media (min-width:560px){ .tcard{grid-template-columns:180px 1fr} }
+.tcard__ph{position:relative;background:var(--paper-2);aspect-ratio:1/1}
+@media (min-width:560px){ .tcard__ph{aspect-ratio:auto;min-height:100%} }
+.tcard__ph img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;position:absolute;inset:0}
+.tcard__body{padding:24px 24px 22px;display:flex;flex-direction:column;gap:16px}
+.tcard q{quotes:"«" "»";font:500 17px/1.5 var(--f-body)}
+.tcard__who{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+.tcard__person{display:flex;align-items:center;gap:12px;min-width:0}
+.tcard__av{display:none;flex:none;width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 22%;background:var(--paper-2)}
+/* mobile: no big square photo — avatar + name on top, quote below */
+@media (max-width:559px){
+  .tcard__ph{display:none}
+  .tcard__av{display:block}
+  .tcard__body{padding:18px 18px 20px;gap:14px}
+  .tcard__who{order:-1;margin-top:0;padding:0 0 14px;border-top:0;border-bottom:1px solid var(--line)}
+  .tcard q{font-size:16px}
+  .tcard__logo{max-height:26px;max-width:64px}
+}
+.tcard__who b{display:block;font:700 15px/1.2 var(--f-display)}
+.tcard__who span{display:block;font:400 13.5px/1.4 var(--f-label);color:var(--muted);margin-top:3px}
+.tcard__logo{max-height:34px;max-width:90px;width:auto;object-fit:contain;mix-blend-mode:multiply}
+.nums{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:40px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+@media (min-width:900px){ .nums{grid-template-columns:repeat(4,1fr)} }
+.nums div{background:var(--card);padding:22px 20px}
+.nums b{display:block;font:800 clamp(30px,4vw,44px)/1 var(--f-display);letter-spacing:-.02em}
+.nums span{display:block;margin-top:8px;font:400 13.5px/1.4 var(--f-label);color:var(--muted)}
+.wall{margin-top:56px}
+.wall__head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.marquee{margin-top:22px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marquee__row{display:flex;gap:12px;width:max-content;animation:mq 80s linear infinite}
+.marquee__row + .marquee__row{margin-top:12px;animation-direction:reverse;animation-duration:95s}
+.marquee:hover .marquee__row{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){
+  .marquee{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
+  .marquee__row{animation:none}
+}
+.wt{flex:none;width:150px;margin:0}
+.wt__ph{aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;background:var(--paper-2)}
+.wt__ph img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+@media (max-width:559px){ .wt{width:112px} .marquee__row{gap:10px} .marquee__row + .marquee__row{margin-top:10px} .wall{margin-top:44px} .nums{margin-top:28px} .tst{margin-top:28px} }
+.wt figcaption{margin-top:8px}
+.wt b{display:block;font:600 13.5px/1.25 var(--f-display)}
+.wt span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:3px;font:400 12.5px/1.35 var(--f-label);color:var(--muted)}
+/* founder: photo column is a positioned box, so the image can never push past its column */
+.founder{display:grid;margin-top:64px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+.founder__ph{position:relative;aspect-ratio:4/3;background:var(--paper-2)}
+.founder__ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 14%}
+.founder__body{padding:24px 20px 26px}
+.founder__body .eyebrow{margin-top:0}
+.founder__body p{color:var(--ink-2);margin:0 0 14px;max-width:60ch}
+@media (min-width:560px){ .founder__ph{aspect-ratio:16/10} .founder__body{padding:30px 32px 32px} }
+@media (min-width:900px){
+  .founder{grid-template-columns:minmax(300px,380px) 1fr}
+  .founder__ph{aspect-ratio:auto;min-height:100%}
+  .founder__ph img{object-position:50% 20%}
+  .founder__body{padding:44px 48px}
+}
+.certs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+.certs figure{margin:0;min-width:0}
+.cert{position:relative;display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:6px;background:#fff;overflow:hidden;cursor:zoom-in;transition:border-color .15s ease, box-shadow .15s ease}
+.cert img{width:100%;height:auto}
+.cert:hover{border-color:var(--ink);box-shadow:0 8px 24px rgba(14,14,13,.12)}
+.cert__zoom{position:absolute;right:8px;bottom:8px;display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:rgba(14,14,13,.78);color:#fff;font:600 12px/1 var(--f-label)}
+.cert__zoom svg{width:13px;height:13px}
+.certs figcaption{margin-top:8px;font:400 12.5px/1.4 var(--f-label);color:var(--muted)}
+@media (max-width:420px){ .cert__zoom span{display:none} .cert__zoom{padding:7px} }
+
+/* lightbox for certificates */
+.lb{position:fixed;inset:0;z-index:1400;display:none;align-items:center;justify-content:center;padding:56px 12px 24px;background:rgba(14,14,13,.9)}
+.lb.open{display:flex}
+.lb figure{margin:0;max-width:min(1040px,100%);max-height:100%;display:flex;flex-direction:column;align-items:center}
+.lb figure{width:min(960px,100%)}
+.lb img{width:100%;height:auto;max-height:calc(100vh - 150px);object-fit:contain;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.lb figcaption{margin-top:14px;color:#D6D1C9;font:400 14px/1.4 var(--f-label);text-align:center}
+.lb__close{position:absolute;top:10px;right:10px;width:48px;height:48px;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:30px;line-height:1;cursor:pointer}
+.lb__close:hover{background:rgba(255,255,255,.22)}
+.lb__nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:22px;cursor:pointer}
+.lb__nav:hover{background:rgba(255,255,255,.22)}
+.lb__nav--prev{left:12px} .lb__nav--next{right:12px}
+@media (max-width:700px){ .lb__nav{top:auto;bottom:14px;transform:none} }
+
+/* FREE & SAFE */
+.free{display:grid;gap:14px;margin-top:40px}
+@media (min-width:900px){ .free{grid-template-columns:repeat(4,1fr);gap:16px} }
+.free article{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px 22px;display:flex;flex-direction:column;gap:10px}
+.free .when{font:600 12px/1.3 var(--f-label);letter-spacing:.06em;color:var(--blue);text-transform:uppercase}
+.free p{margin:0;font-size:15.5px;color:var(--ink-2)}
+.anchor{margin:28px 0 0;font:600 clamp(18px,2vw,21px)/1.45 var(--f-display);max-width:60ch}
+.safe{display:grid;gap:0;margin-top:36px;border-top:1px solid #3B3934}
+@media (min-width:900px){ .safe{grid-template-columns:repeat(5,1fr);border-top:0;gap:18px} }
+.safe article{padding:20px 0;border-bottom:1px solid #3B3934}
+@media (min-width:900px){ .safe article{border:0;border-top:1px solid #3B3934;padding:22px 0 0} }
+.safe h3{margin:0 0 8px;font:700 17px/1.3 var(--f-display);color:#fff}
+.safe p{margin:0;font-size:15px;color:#D6D1C9}
+.between{font:800 clamp(56px,12vw,150px)/.9 var(--f-display);letter-spacing:-.04em;text-transform:uppercase;color:#fff;margin:0 0 10px}
+.between span{color:var(--blue)}
+
+/* FINAL */
+.final{display:grid;gap:40px}
+@media (min-width:980px){ .final{grid-template-columns:1.1fr 1fr;gap:64px;align-items:start} }
+.formcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 22px}
+@media (min-width:560px){ .formcard{padding:34px} }
+.formcard h3{font:800 22px/1.15 var(--f-display);text-transform:uppercase;letter-spacing:-.01em;margin:0 0 6px}
+
+/* LEAD BANDS: mid-page forms (after results and after proof) */
+.band{display:grid;gap:26px;margin-top:56px;border-radius:18px;padding:28px 18px 18px;background:var(--blue);color:#fff}
+@media (min-width:560px){ .band{padding:40px 36px 36px} }
+@media (min-width:980px){ .band{grid-template-columns:1fr minmax(400px,460px);gap:56px;align-items:center;padding:52px} }
+.band .eyebrow{color:rgba(255,255,255,.8)}
+.band .eyebrow::after{background:rgba(255,255,255,.35)}
+.band__h{font:800 clamp(27px,3.8vw,42px)/1.02 var(--f-display);letter-spacing:-.02em;text-transform:uppercase;margin:0 0 16px;text-wrap:balance}
+.band__h span{color:var(--ink)}
+.band__lead{margin:0 0 22px;font-size:17px;line-height:1.55;color:rgba(255,255,255,.92);max-width:50ch;text-wrap:pretty}
+.band__list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.band__list li{display:grid;grid-template-columns:24px 1fr;gap:8px;font-size:15.5px;line-height:1.45}
+.band__list li::before{content:"";width:18px;height:18px;margin-top:2px;border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.3l2.6 2.5L13 6.4' fill='none' stroke='%230045FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat}
+.band__alt{margin-top:22px}
+.band .linkbtn{color:#fff}
+.band .linkbtn:hover{color:#fff;opacity:.8}
+.band__form{background:var(--card);color:var(--ink);border-radius:var(--r-lg);padding:22px 18px}
+@media (min-width:560px){ .band__form{padding:30px} }
+@media (max-width:559px){ .band{gap:22px;margin-top:44px} .band__lead{font-size:16px;margin-bottom:16px} .band__list{gap:8px} .band__list li{font-size:15px} .band__alt{display:none} .faces{margin-top:18px} }
+.band--ink{background:var(--ink)}
+.band--ink .eyebrow{color:#A39E95}
+.band--ink .eyebrow::after{background:#3B3934}
+.band--ink .band__h span{color:var(--blue)}
+.band--ink .band__lead{color:#D6D1C9}
+.band--ink .band__list li::before{background-color:var(--blue);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.3l2.6 2.5L13 6.4' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.faces{display:flex;align-items:center;flex-wrap:wrap;gap:12px 16px;margin-top:26px}
+.faces__row{display:flex}
+.faces__row img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:50% 20%;border:2px solid var(--ink);margin-left:-12px;background:var(--paper-2)}
+.faces__row img:first-child{margin-left:0}
+.faces p{margin:0;font:400 14px/1.4 var(--f-label);color:#D6D1C9}
+.faces b{color:#fff;font-weight:700}
+
+/* FORM */
+.form{display:grid;gap:16px}
+.field label,.field .lbl{display:block;font:600 14px/1.3 var(--f-body);margin-bottom:8px}
+.field .opt-l{font-weight:400;color:var(--muted)}
+.input{width:100%;min-height:54px;padding:12px 14px;border:1px solid var(--line-2);border-radius:var(--r);background:#fff;font-size:16px}
+.input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-soft)}
+.input[aria-invalid="true"]{border-color:#C62828}
+.err{display:none;margin-top:6px;font-size:13px;color:#C62828}
+.err.show{display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;inset:0;opacity:0;cursor:pointer;margin:0}
+.chip span{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border:1px solid var(--line-2);border-radius:999px;background:#fff;font-size:15px}
+.chip input:checked + span{border-color:var(--blue);background:var(--blue-soft);color:var(--blue);font-weight:600}
+.chip input:focus-visible + span{outline:2px solid var(--blue);outline-offset:2px}
+.form__legal{margin:0;font-size:12.5px;line-height:1.5;color:var(--muted)}
+.form__ok{display:none}
+.form__ok.show{display:block}
+.form__ok h3{font:800 24px/1.1 var(--f-display);text-transform:uppercase;margin:0 0 10px}
+.form__ok ul{padding-left:18px;margin:10px 0 0}
+.field .iti{width:100%;display:block}
+.field .iti input.input{width:100%}
+.iti__selected-country{border-radius:var(--r) 0 0 var(--r)}
+.iti__dropdown-content{font-family:var(--f-body);border-radius:var(--r)}
+.iti--container{z-index:1300}
+.iti__search-input{font-family:var(--f-body);font-size:16px}
+
+/* MODAL */
+.modal{position:fixed;inset:0;z-index:1200;display:none}
+.modal.open{display:block}
+.modal__overlay{position:absolute;inset:0;background:rgba(14,14,13,.55)}
+.modal__box{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(520px,calc(100% - 24px));max-height:calc(100% - 24px);overflow:auto;background:var(--card);border-radius:18px;padding:30px 22px 24px}
+@media (min-width:560px){ .modal__box{padding:36px 34px 30px} }
+.modal__close{position:absolute;top:10px;right:10px;width:44px;height:44px;border:0;background:none;font-size:28px;line-height:1;cursor:pointer;color:var(--muted)}
+.modal h3{font:800 clamp(22px,3vw,26px)/1.1 var(--f-display);text-transform:uppercase;letter-spacing:-.01em;margin:0 0 8px;padding-right:30px}
+.modal .fsub{margin:0 0 20px;color:var(--ink-2);font-size:15.5px}
+body.modal-open{overflow:hidden}
+
+/* FAQ */
+.faq{margin-top:36px;border-top:1px solid var(--line-2)}
+.faq details{border-bottom:1px solid var(--line-2)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font:700 clamp(17px,2vw,20px)/1.3 var(--f-display)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 26px/1 var(--f-label);color:var(--blue);transition:transform .2s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 0 24px;max-width:70ch;color:var(--ink-2)}
+.faq .a p{margin:0 0 12px}
+.faq .a q{quotes:"«" "»";font-style:italic}
+
+/* FOOTER */
+.ftr{background:var(--ink);color:#A39E95;padding:48px 0 calc(40px + env(safe-area-inset-bottom));font-size:14px}
+.ftr img{height:18px;width:auto;margin-bottom:18px}
+.ftr p{margin:0 0 8px;max-width:80ch}
+.ftr a{color:#D6D1C9}
+
+/* sticky mobile CTA */
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(242,239,233,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s ease}
+.stick.show{transform:none}
+@media (min-width:900px){ .stick{display:none} }
+
+@media (prefers-reduced-motion: reduce){
+  .view{animation:none}
+  .tape__fill,.stick,.gs,.opt{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="hdr__logo" href="#top" aria-label="BRAVE CAPITAL"><img src="assets/brand/logo2-black.png" alt="BRAVE CAPITAL" width="141" height="20"></a>
+    <span class="hdr__tag">ательє персональних фінансів</span>
+    <a class="btn btn--sm" href="#calc" data-track="hdr_calc">Порахувати зарплату</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 01 HERO -->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div>
+      <p class="eyebrow"><b>01</b> Для власників бізнесу</p>
+      <h1 class="h1" id="h1"><span class="blue">Бізнес заробляє.</span> А&nbsp;скільки з&nbsp;цього&nbsp;— особисто ваше?</h1>
+      <p class="lead">BRAVE — особистий фінансовий директор власника. Визначаємо вашу зарплату з бізнесу, відокремлюємо гроші родини від обороту, збираємо резерв і гроші поза бізнесом. Облік і рутину ведемо за вас.</p>
+      <div class="hero__cta">
+        <a class="btn" href="#calc" data-track="hero_calc">Порахувати мою зарплату власника · 3 хв <span class="arr">→</span></a>
+        <button type="button" class="linkbtn" data-lead="hero">або одразу записатися на розбір</button>
+      </div>
+      <p class="hero__micro">Без реєстрації · відповіді діапазонами · результат одразу на екрані</p>
+      <div class="trust">
+        <div><b>200+</b> клієнтів у супроводі</div>
+        <div><b>9,3/10</b> оцінка клієнтів · 282 відповіді</div>
+        <div><b>900+</b> стратегій BRAVE PLAN</div>
+      </div>
+    </div>
+    <div>
+      <div class="mosaic">
+        <figure><img class="gs" src="assets/clients/yaroslav-kuzmich.jpg" alt="Ярослав Кузьміч" width="400" height="400" fetchpriority="high"><figcaption>Ярослав Кузьміч · YARMICH</figcaption></figure>
+        <figure><img class="gs" src="assets/clients/olena-pohlyad.jpg" alt="Олена Погляд" width="400" height="400"><figcaption>Олена Погляд · VOIR</figcaption></figure>
+        <figure><img class="gs" src="assets/clients/ivan-shchebetun.jpg" alt="Іван Щебетун" width="400" height="400"><figcaption>Іван Щебетун · UNIT Development</figcaption></figure>
+        <figure><img class="gs" src="assets/clients/yuriy-bohoslavets.jpg" alt="Юрій Богославець" width="319" height="480"><figcaption>Юрій Богославець · DSN Group</figcaption></figure>
+        <figure class="stat-tile"><b>200+</b><span>власників і сімей у супроводі</span></figure>
+        <figure><img class="gs" src="assets/clients/valeriy-maksymenko.jpg" alt="Валерій Максименко" width="320" height="480"><figcaption>Валерій Максименко · PAPAYA</figcaption></figure>
+      </div>
+      <p class="mosaic__cap">Клієнти BRAVE — засновники брендів, виробництв, агенцій і клінік. Раніше нас знаходили лише за рекомендаціями.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 PAIN -->
+<section class="sec sec--white" id="pain">
+  <div class="wrap">
+    <p class="eyebrow"><b>02</b> Звучить знайомо?</p>
+    <h2 class="h2">Гроші є. <span class="blue">Спокою немає.</span></h2>
+    <p class="lead">Так власники описують свої фінанси на першій зустрічі з радником. Можливо, щось із цього — і про вас.</p>
+    <div class="cards3" id="pains"></div>
+    <div class="reframe">
+      <img class="gs" src="assets/clients/valeriy-maksymenko.jpg" alt="Валерій Максименко" width="320" height="480" loading="lazy">
+      <div>
+        <p>«Заробляти і розпоряджатися заробленим — дві різні компетенції. Першу я мав давно. Другу будую разом із BRAVE CAPITAL.»</p>
+        <cite>Валерій Максименко · засновник PAPAYA, жіночий одяг</cite>
+        <small>Це не про нестачу знань. Бізнес уже довів, що ви вмієте заробляти. Розпоряджатися — інша навичка, і її не обов'язково тягнути самому.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 SOLUTION -->
+<section class="sec" id="solution">
+  <div class="wrap">
+    <p class="eyebrow"><b>03</b> Рішення</p>
+    <h2 class="h2">Система <span class="blue">замість інтуїції</span></h2>
+    <p class="lead">BRAVE — ательє персональних фінансів. Ми збираємо особисті гроші власника в одну систему з п'яти частин — і ведемо її разом з вами.</p>
+    <div class="sol">
+      <ol class="parts">
+        <li><span class="n">01</span><h3>Зарплата власника</h3><p>Фіксована сума, яку бізнес може платити вам щомісяця без шкоди обороту.</p></li>
+        <li><span class="n">02</span><h3>Два кошики</h3><p>Окремі рахунки й правила: що належить бізнесу, а що — родині.</p></li>
+        <li><span class="n">03</span><h3>Правило розподілу прибутку</h3><p>Скільки в оборот, скільки в резерв бізнесу, скільки вам, а скільки — поза бізнес.</p></li>
+        <li><span class="n">04</span><h3>Запас міцності родини</h3><p>Резерв на місяці, коли бізнес просідає. З правилами, щоб він не повертався в оборот.</p></li>
+        <li><span class="n">05</span><h3>Гроші поза бізнесом</h3><p>Частина статків, яка не залежить від одного бізнесу. Спочатку порядок і резерв, потім — план під ваші цілі, а не під чужі прогнози.</p></li>
+      </ol>
+      <div class="cutdemo" aria-label="Приклад правила розподілу прибутку">
+        <p class="eyebrow" style="margin:0">Приклад · розкрій прибутку власника</p>
+        <p class="h3" style="margin-top:10px">Кожна гривня прибутку має своє місце</p>
+        <div class="cutdemo__bar" aria-hidden="true"><i style="width:40%;background:var(--seg-1)"></i><i style="width:10%;background:var(--seg-2)"></i><i style="width:33%;background:var(--seg-3)"></i><i style="width:17%;background:var(--seg-4)"></i></div>
+        <ul>
+          <li><s style="background:var(--seg-1)"></s>Оборот і розвиток<em>40%</em></li>
+          <li><s style="background:var(--seg-2)"></s>Резерв бізнесу<em>10%</em></li>
+          <li><s style="background:var(--seg-3)"></s>Зарплата власника<em>33%</em></li>
+          <li><s style="background:var(--seg-4)"></s>Гроші поза бізнесом<em>17%</em></li>
+        </ul>
+        <p class="small muted" style="margin:16px 0 0">Пропорції — приклад. Ваші покаже калькулятор нижче, а точні — стратегія з радником.</p>
+      </div>
+    </div>
+
+    <div class="why">
+      <article>
+        <h3 class="h3">Вам не потрібна ще одна таблиця</h3>
+        <p>Радник закриває місяць за вас — у перший день наступного. Ви бачите одну сторінку: скільки є, куди пішло, що далі.</p>
+        <div class="quote"><q>Вів облік у Google-таблицях три роки, але припинив — незручно та енергозатратно, 30–40 хвилин щодня</q><cite>CEO виробничої компанії · інтерв'ю BRAVE</cite></div>
+      </article>
+      <article>
+        <h3 class="h3">Рутина — наша, рішення — ваші</h3>
+        <p>70% роботи робить радник, 30% — ваші рішення. Наше внутрішнє правило: «Якщо клієнту довелось щось зробити самому — радник не спрацював».</p>
+      </article>
+      <article>
+        <h3 class="h3">Гроші лишаються на ваших рахунках</h3>
+        <p><span class="todo" title="ПІДТВЕРДИТИ юридично й операційно">Ми не приймаємо кошти клієнтів на свої рахунки.</span> Кожне рішення ухвалюєте ви, а все, що ви розповідаєте, лишається між вами і радником.</p>
+      </article>
+      <article>
+        <h3 class="h3">Одна методологія на всю команду</h3>
+        <p>Ви працюєте з одним радником, але за ним — уся практика: <span class="todo" title="ПІДТВЕРДИТИ: 10 чи 15+">10 радників</span>, єдиний стандарт звітності й методологія BRAVE PLAN (свідоцтво № 138598).</p>
+      </article>
+    </div>
+
+    <dl class="roles">
+      <div><dt>Бухгалтер</dt><dd>податки й звітність бізнесу</dd></div>
+      <div><dt>Фіндиректор</dt><dd>гроші компанії</dd></div>
+      <div><dt>Банк</dt><dd>свої продукти</dd></div>
+      <div class="me"><dt>Радник BRAVE</dt><dd>гроші власника й родини — і наступні кроки. Працюємо разом з вашою командою, а не замість неї.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- 04 CALCULATOR -->
+<section class="sec sec--ink calc-sec" id="calc">
+  <div class="wrap">
+    <div class="calc-grid">
+      <div class="calc-aside">
+        <p class="eyebrow"><b>04</b> Калькулятор зарплати власника</p>
+        <h2 class="h2">Скільки бізнес може платити вам <span class="blue">щомісяця?</span></h2>
+        <p class="lead">6 коротких питань, відповіді — діапазонами. Результат одразу, без реєстрації.</p>
+        <ul>
+          <li>Ваша зарплата власника — сума, яку бізнес витримує і в слабкий місяць</li>
+          <li>Правило розподілу прибутку на 4 частини</li>
+          <li>Запас міцності родини: скільки є зараз і коли дійдете до цілі</li>
+          <li>Скільки буде поза бізнесом через 12 місяців</li>
+          <li>3 питання, які варто розібрати з радником</li>
+        </ul>
+        <p class="hero__micro">Розрахунок — орієнтир, а не індивідуальна рекомендація.</p>
+      </div>
+      <div class="calc" aria-live="polite"><div id="cview"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 HOW -->
+<section class="sec" id="how">
+  <div class="wrap">
+    <p class="eyebrow"><b>05</b> Як це працює</p>
+    <h2 class="h2">П'ять кроків&nbsp;— <span class="blue">і перші три безкоштовні</span></h2>
+    <ol class="steps">
+      <li><div class="top"><span class="n">01</span><span class="tag">безкоштовно</span></div><h3>Калькулятор</h3><span class="t">3 хвилини</span><p>Ваша орієнтовна зарплата власника і правило розподілу прибутку.</p></li>
+      <li><div class="top"><span class="n">02</span><span class="tag">безкоштовно</span></div><h3>Розбір результату</h3><span class="t">20 хвилин онлайн</span><p>Радник перевіряє цифри й відповідає на 3 питання з вашого розрахунку.</p></li>
+      <li><div class="top"><span class="n">03</span><span class="tag">безкоштовно</span></div><h3>Діагностика</h3><span class="t">75 хвилин</span><p>Повна карта ваших грошей: рахунки, доходи, витрати, резерви, зобов'язання. Після неї — персональна пропозиція з прозорою ціною.</p></li>
+      <li class="paid"><div class="top"><span class="n">04</span></div><h3>Стратегія</h3><span class="t">перший тиждень</span><p>Якщо вирішите продовжити: план на 12 місяців із сумами й датами.</p></li>
+      <li class="paid"><div class="top"><span class="n">05</span></div><h3>Запуск і ритм</h3><span class="t">перший місяць і далі</span><p>Розділення рахунків, зарплата власника, резерв. Далі — закриття кожного місяця і перегляд «план / факт» щокварталу.</p></li>
+    </ol>
+    <p class="foot-note">«Ціна — не питання першої зустрічі. Спершу ми розбираємось, чи можемо допомогти.»</p>
+  </div>
+</section>
+
+<!-- 06 RESULTS -->
+<section class="sec sec--white" id="results">
+  <div class="wrap">
+    <p class="eyebrow"><b>06</b> Результати</p>
+    <h2 class="h2">Що змінюється <span class="blue">в цифрах</span></h2>
+    <p class="lead">Кейси клієнтів BRAVE. Дані знеособлені.</p>
+    <div class="cases" id="cases"></div>
+    <div class="cases" id="casesMore" hidden></div>
+    <div class="cases-more"><button type="button" class="linkbtn" id="moreCases">Ще кейси</button></div>
+    <p class="foot-note">Результати залежать від прибутку бізнесу і рішень клієнта. Це не обіцянка і не прогноз дохідності.</p>
+
+    <!-- mid-page form #1 -->
+    <div class="band" id="lead-results">
+      <div>
+        <p class="eyebrow">Розбір · 20 хвилин онлайн</p>
+        <h2 class="band__h">Де у вас «застрягають» гроші? <span>Розберемо за 20 хвилин</span></h2>
+        <p class="band__lead">Радник BRAVE подивиться на вашу ситуацію, відповість на питання і чесно скаже, чи є сенс іти далі. Безкоштовно і без зобов'язань.</p>
+        <ul class="band__list">
+          <li>Калькулятор не обов'язковий — можна записатися одразу</li>
+          <li>Досить діапазонів: без виписок і точних сум</li>
+          <li>Ціна — не питання першої зустрічі</li>
+        </ul>
+        <div class="band__alt"><a class="linkbtn" href="#calc" data-track="band_results_calc">або спершу порахувати зарплату власника · 3 хв</a></div>
+      </div>
+      <div class="band__form" data-form-slot="band_results" data-fid="b1"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 PROOF -->
+<section class="sec" id="proof">
+  <div class="wrap">
+    <p class="eyebrow"><b>07</b> Клієнти</p>
+    <h2 class="h2">Раніше нас знаходили <span class="blue">лише за рекомендаціями</span></h2>
+    <p class="lead">Тепер розповідаємо про себе самі. Ось що кажуть власники бізнесу, з якими ми працюємо.</p>
+    <div class="tst" id="tst"></div>
+
+    <div class="nums">
+      <div><b>200+</b><span>клієнтів у супроводі</span></div>
+      <div><b>9,3/10</b><span>рівень задоволення · 282 відповіді</span></div>
+      <div><b>7 років</b><span>найдовша співпраця клієнта з радником</span></div>
+      <div><b>900+</b><span>стратегій BRAVE PLAN</span></div>
+    </div>
+
+    <div class="wall">
+      <div class="wall__head">
+        <div>
+          <p class="eyebrow" style="margin-bottom:10px">Нам довіряють</p>
+          <p class="h3" style="margin:0">Засновники, власники, лікарі, юристи, спортсмени</p>
+        </div>
+      </div>
+      <div class="marquee" id="wall"></div>
+    </div>
+
+    <div class="founder">
+      <div class="founder__ph"><img src="assets/brand/founder-nazarii-rybinskyi.jpg" alt="Назарій Рибінський" width="460" height="575" loading="lazy"></div>
+      <div class="founder__body">
+        <p class="eyebrow">Засновник · CEO · з 2015 у фінансах</p>
+        <h3 class="h2" style="font-size:clamp(26px,3.4vw,38px)">Назарій Рибінський</h3>
+        <p>Почав у 2015-му — з фінансової грамотності, перших фінансових планів і розмов про закордонні ринки тоді, коли в Україні ще не було навіть законів про інвестування за кордон. Згодом об'єднав людей у команду фінансових радників.</p>
+        <p>Автор методології BRAVE PLAN і програми підготовки радників. Те, що працює з клієнтами, спершу опановує команда.</p>
+        <div class="certs">
+          <figure><button type="button" class="cert" data-zoom="0" aria-label="Відкрити свідоцтво № 138598"><img src="assets/brand/cert-138598.jpg" alt="Свідоцтво про реєстрацію авторського права № 138598" width="520" height="304" loading="lazy"><span class="cert__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4L14 14M7 5v4M5 7h4"/></svg><span>Відкрити</span></span></button><figcaption>Методологія BRAVE PLAN · свідоцтво № 138598</figcaption></figure>
+          <figure><button type="button" class="cert" data-zoom="1" aria-label="Відкрити свідоцтво № 140162"><img src="assets/brand/cert-140162.jpg" alt="Свідоцтво IFA BOOTCAMP № 140162" width="520" height="296" loading="lazy"><span class="cert__zoom" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="7" cy="7" r="4.6"/><path d="M10.4 10.4L14 14M7 5v4M5 7h4"/></svg><span>Відкрити</span></span></button><figcaption>Підготовка радників · свідоцтво № 140162</figcaption></figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- mid-page form #2 -->
+    <div class="band band--ink" id="lead-proof">
+      <div>
+        <p class="eyebrow">Запис на розбір</p>
+        <h2 class="band__h">Рекомендація <span>не потрібна</span></h2>
+        <p class="band__lead">Раніше до BRAVE приходили лише від знайомих клієнтів. Тепер можна напряму: 20 хвилин онлайн з радником, 1-на-1. Усе, що ви розповідаєте, лишається між вами і радником.</p>
+        <ul class="band__list">
+          <li>На першій розмові нічого не продаємо</li>
+          <li>Після розмови вирішуєте ви: іти далі чи ні</li>
+        </ul>
+        <div class="faces">
+          <div class="faces__row" aria-hidden="true">
+            <img src="assets/clients/yaroslav-kuzmich.jpg" alt="" width="46" height="46" loading="lazy">
+            <img src="assets/clients/olena-pohlyad.jpg" alt="" width="46" height="46" loading="lazy">
+            <img src="assets/clients/ivan-shchebetun.jpg" alt="" width="46" height="46" loading="lazy">
+            <img src="assets/clients/yuriy-bohoslavets.jpg" alt="" width="46" height="46" loading="lazy">
+            <img src="assets/clients/valeriy-maksymenko.jpg" alt="" width="46" height="46" loading="lazy">
+          </div>
+          <p><b>200+</b> клієнтів у супроводі · <b>9,3/10</b> оцінка клієнтів</p>
+        </div>
+      </div>
+      <div class="band__form" data-form-slot="band_proof" data-fid="b2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 FREE -->
+<section class="sec sec--white" id="free">
+  <div class="wrap">
+    <p class="eyebrow"><b>08</b> Перший крок</p>
+    <h2 class="h2">Що ви отримаєте, <span class="blue">нічого не купуючи</span></h2>
+    <div class="free">
+      <article><span class="when">Одразу на екрані</span><h3 class="h3">Ваш розрахунок</h3><p>Зарплата власника, правило розподілу прибутку, запас міцності родини і гроші поза бізнесом через 12 місяців.</p></article>
+      <article><span class="when">20 хвилин</span><h3 class="h3">Розбір результату</h3><p>Радник перевіряє цифри і відповідає на 3 питання, які калькулятор зібрав з ваших відповідей.</p></article>
+      <article><span class="when">75 хвилин</span><h3 class="h3">Діагностика</h3><p>Якщо захочете продовжити: повна карта ваших грошей — 11 блоків питань про рахунки, доходи, витрати, резерви й зобов'язання.</p></article>
+      <article><span class="when">Бонус</span><h3 class="h3">Тест 4 фінансових компетенцій</h3><p>Заробляти, витрачати, накопичувати, примножувати — <span class="todo" title="ПІДТВЕРДИТИ формат і посилання">що з цього у вас сильне, а що варто підтягнути.</span></p></article>
+    </div>
+    <p class="anchor">Власники роками відкладають «розібратися з фінансами». Карта грошей після діагностики — та сама точка, з якої почалися 900+ стратегій BRAVE PLAN.</p>
+    <p style="margin:24px 0 0"><a class="btn" href="#calc" data-track="free_calc">Почати з калькулятора <span class="arr">→</span></a></p>
+  </div>
+</section>
+
+<!-- 09 SAFE -->
+<section class="sec sec--ink" id="safe">
+  <div class="wrap">
+    <p class="eyebrow"><b>09</b> Без ризику для вас</p>
+    <p class="between">Між <span>нами</span></p>
+    <p class="lead">Без зобов'язань і без зайвих питань. Приватність — база нашої роботи: гроші, активи, рішення — все, що ви розповідаєте, лишається між вами і радником.</p>
+    <div class="safe">
+      <article><h3>Нічого не продаємо на першій розмові</h3><p>Ціна — не питання першої зустрічі. <span class="todo" title="ПІДТВЕРДИТИ з відділом продажів">Розбір і діагностика безкоштовні й ні до чого не зобов'язують.</span></p></article>
+      <article><h3>Виписки не потрібні</h3><p>Досить діапазонів. Точні цифри — лише тоді, коли ви самі вирішите.</p></article>
+      <article><h3>Тільки 1-на-1</h3><p>Ми не ділимось даними клієнтів і не використовуємо їх поза роботою. <span class="todo" title="ПІДТВЕРДИТИ наявність шаблону NDA">NDA — за запитом.</span></p></article>
+      <article><h3>Гроші — на ваших рахунках</h3><p><span class="todo" title="ПІДТВЕРДИТИ">Ми не приймаємо кошти клієнтів на свої рахунки.</span> Рішення ухвалюєте ви.</p></article>
+      <article><h3>Без оцінок і лекцій</h3><p>Ми не вчимо економити і не оцінюємо. Допомагаємо побачити картину і зібрати систему.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 10 FINAL CTA -->
+<section class="sec" id="final">
+  <div class="wrap final">
+    <div>
+      <p class="eyebrow"><b>10</b> Почнімо</p>
+      <h2 class="h2">Скільки років ви вже кажете: <span class="blue">«треба нарешті розібратися з фінансами»?</span></h2>
+      <p class="lead">Почніть із 3 хвилин. Порахуйте свою зарплату власника — і розберіть результат з радником.</p>
+      <a class="btn" href="#calc" data-track="final_calc">Порахувати мою зарплату власника <span class="arr">→</span></a>
+    </div>
+    <div class="formcard">
+      <h3>Вже вирішили?</h3>
+      <p class="muted" style="margin:0 0 20px">Запишіться на 20-хвилинний розбір без калькулятора. Радник зв’яжеться з вами так, як вам зручно.</p>
+      <div data-form-slot="final" data-fid="f"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 FAQ -->
+<section class="sec sec--white" id="faq">
+  <div class="wrap">
+    <p class="eyebrow"><b>11</b> Питання</p>
+    <h2 class="h2">Чесно <span class="blue">про головне</span></h2>
+    <div class="faq">
+      <details><summary>Я можу розібратися сам. Навіщо мені радник?</summary><div class="a"><p>Можете, звісно. Питання в іншому: чи варто власнику витрачати на це десятки годин і ставати бухгалтером власного життя. Ми не вчимо — ми робимо: радник веде облік, закриває місяць, тримає ритм і нагадує про рішення. Ви лише кажете «так» чи «ні».</p></div></details>
+      <details><summary>Радник — це коли грошей стане більше. Мені ще рано.</summary><div class="a"><p>Радник потрібен не від суми, а з моменту, коли грошей, рахунків і рішень стало більше, ніж хочеться тримати в голові. Що раніше з'являється система, то менше грошей «розчиняється» по дорозі.</p><p>Один із власників сказав нам: <q>Зрозумів, що міг би мати фінансового радника набагато раніше. Це була помилка — не делегувати раніше</q>.</p></div></details>
+      <details><summary>Зараз гроші потрібніші в бізнесі.</summary><div class="a"><p>Бізнес — сильний актив, і ми не забираємо гроші з обороту: зарплата власника рахується з урахуванням потреб бізнесу, калькулятор це показує. Але коли все в одному бізнесі, родина залежить від одного ризику. Невелика регулярна частина поза бізнесом — опора і для вас, і для самої справи.</p><p>Олена Погляд, засновниця VOIR: <q>Раніше вільні гроші просто лежали в бізнесі. Тепер я розумію: робота з капіталом — окрема справа, і я більше її не уникаю</q>.</p></div></details>
+      <details><summary>У мене вже є бухгалтер і фіндиректор.</summary><div class="a"><p>І це добре. Бухгалтер відповідає за податки й звітність бізнесу, фіндиректор — за гроші компанії. За гроші власника і родини зазвичай не відповідає ніхто. Ми працюємо з вашою командою, а не замість неї.</p><p>Навіть власниця бухгалтерського аутсорсу розповідала нам: <q>Навчаю інших розділяти фінанси, але сама не встигаю це робити</q>.</p></div></details>
+      <details><summary>Я не хочу нікому показувати свої доходи.</summary><div class="a"><p>Розуміємо: багато власників не розповідають про доходи нікому, крім партнера. Тому калькулятор і перша розмова — лише на діапазонах. Працюємо тільки 1-на-1, усе сказане лишається між вами і радником. <span class="todo" title="ПІДТВЕРДИТИ">NDA — за запитом, доступ до ваших рахунків на старті не потрібен.</span></p></div></details>
+      <details class="review-only"><summary>[ПІСЛЯ РІШЕННЯ ПО ITA] Як ви заробляєте? Ви продаєте фінансові продукти?</summary><div class="a"><p>Чернетка: «Клієнт платить нам за стратегію і супровід — за прозорою ціною, яку ви бачите після діагностики.» [ЗАПОВНИТИ: чи отримує BRAVE або радник винагороду від провайдерів продуктів; якщо так — як вона розкривається і чи зараховується клієнту.] Питання показується лише в режимі ?review=1.</p></div></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <img src="assets/brand/logo2-white.png" alt="BRAVE CAPITAL" width="127" height="18" loading="lazy">
+    <p>BRAVE CAPITAL · ательє персональних фінансів · Київ · онлайн по всьому світу <span class="review-only" style="display:inline">· [юрособа, ЄДРПОУ, адреса — ПІДТВЕРДИТИ]</span></p>
+    <p><a href="#" class="todo" title="ПІДТВЕРДИТИ посилання">Політика конфіденційності</a> · <a href="https://www.bravecapital.com.ua/">bravecapital.com.ua</a></p>
+    <p style="margin-top:18px;font-size:12.5px">Розрахунки на сторінці — орієнтир за вашими відповідями, а не індивідуальна фінансова, податкова чи інвестиційна рекомендація. Результати клієнтів індивідуальні й не гарантують аналогічних результатів.</p>
+  </div>
+</footer>
+
+<div class="stick" id="stick"><a class="btn btn--block" href="#calc" data-track="sticky_calc">Порахувати зарплату · 3 хв <span class="arr">→</span></a></div>
+
+<!-- lead modal: one form for every CTA, contextual title + source (as on Lagoon) -->
+<div class="modal" id="leadModal" aria-hidden="true">
+  <div class="modal__overlay" data-close></div>
+  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <button class="modal__close" type="button" data-close aria-label="Закрити">×</button>
+    <h3 id="mTitle">Записатися на розбір</h3>
+    <p class="fsub" id="mSub">20 хвилин онлайн з радником BRAVE. Безкоштовно і без зобов'язань.</p>
+    <div data-form-slot="modal" data-fid="m"></div>
+  </div>
+</div>
+
+<!-- lightbox: certificates -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Свідоцтво" aria-hidden="true">
+  <button class="lb__close" type="button" data-lb-close aria-label="Закрити">×</button>
+  <button class="lb__nav lb__nav--prev" type="button" data-lb-step="-1" aria-label="Попереднє свідоцтво">←</button>
+  <figure><img id="lbImg" src="" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="lb__nav lb__nav--next" type="button" data-lb-step="1" aria-label="Наступне свідоцтво">→</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInputWithUtils.min.js"></script>
+<script>
+(function(){
+"use strict";
+
+/* =========================================================
+   0. Налаштування
+   ========================================================= */
+var SUBMIT_URL = "";          // вебхук CRM (POST JSON). Порожньо = прототип: заявка лише в консолі і dataLayer
+var GEO_FALLBACK = "ua";      // якщо жоден гео-сервіс не відповів
+var qs = new URLSearchParams(location.search);
+var STORY = ["stock","service"].indexOf(qs.get("story")) > -1 ? qs.get("story") : "";
+if (qs.get("review") === "1") document.documentElement.classList.add("review");
+
+function track(ev, p){
+  var payload = Object.assign({event: ev, story: STORY || null}, p || {});
+  (window.dataLayer = window.dataLayer || []).push(payload);
+  if (typeof window.fbq === "function"){
+    // Lead — стандартна подія на відправку будь-якої форми. eventID — для дедуплікації, коли підключимо CAPI
+    if (ev === "lead_submit") window.fbq("track", "Lead", {content_name: payload.source, lead_tag: payload.lead_tag}, {eventID: payload.event_id});
+    else window.fbq("trackCustom", ev, payload);
+  }
+  if (window.console) console.info("[track]", ev, payload);
+}
+
+/* =========================================================
+   1. Контент за сюжетом (?story=stock | service)
+   ========================================================= */
+var H1 = {
+  "":      '<span class="blue">Бізнес заробляє.</span> А\u00a0скільки з\u00a0цього\u00a0— особисто ваше?',
+  stock:   '<span class="blue">Заробили добре</span>\u00a0— і знову все залишили в\u00a0бізнесі?',
+  service: '<span class="blue">Дохід стрибає</span> від проєкту до\u00a0проєкту. Ваша зарплата\u00a0— не\u00a0мусить.'
+};
+var PAINS = {
+  "": [
+    ["Скільки заробляю насправді — не скажу", "Бізнес платить команді, постачальникам і податковій. Власнику — «що залишиться», і то не щомісяця.", "Скільки я заробляю насправді — точно не скажу", "типова фраза власника на першій зустрічі"],
+    ["Гроші бізнесу й родини — в одному кошику", "Бізнес-картка стає сімейним гаманцем, а особисті заощадження рятують бізнес у слабкий місяць.", "Бардак у грошах. Де бізнесові, де особисті — не розберу", "типова фраза власника"],
+    ["Усе тримається на одному бізнесі", "Товар, обладнання, оборот — це активи бізнесу. Окремої опори для родини поки немає.", "Все зав'язано на одному бізнесі — якщо ринок зміниться, все буде втрачено", "власник бізнесу · інтерв'ю BRAVE"]
+  ],
+  stock: [
+    ["Скільки заробляю насправді — не скажу", "Прибуток є, але він знову в закупівлях, на складі, в обладнанні. Власнику — «що залишиться».", "Гроші здебільшого лежать у бізнесі", "власник бізнесу з імпорту авто, 200+ людей"],
+    null, null
+  ],
+  service: [
+    ["Скільки заробляю насправді — не скажу", "Хороший проєкт — і здається, що грошей багато. Потім касовий розрив, і особисті гроші йдуть назад у бізнес.", "Раніше сприймав дохід від проєктів як власний, витрачав його, а потім вкладав власні гроші в бізнес", "власник dev-агенції, 29"],
+    ["Гроші бізнесу й родини — в одному кошику", "Бізнес-картка стає сімейним гаманцем, а особисті заощадження рятують збиткові проєкти.", "Особисті фінанси — паличка-виручалочка на все одразу. Збиткові проєкти теж на особистих фінансах", "власник агенції нерухомості"],
+    ["Гроші не затримуються", "Хороший місяць — рівень життя росте. Слабкий — резерв тане.", "Відчуття, що заробляю нормально, але не розумію, куди діваються гроші", "повторювалось у багатьох інтерв'ю BRAVE"]
+  ]
+};
+var CASES = {
+  fashion:  {n:"Fashion-бренд, роздріб одягу", t:"7 місяців", was:["бізнес і особисті гроші змішані","незрозуміло, де гроші і чиї","дохід власника — випадковий"], res:[["€25 000","щомісяця — визначений дохід власника"],["€120 000+","капітал поза бізнесом"]]},
+  goods:    {n:"Товарний бізнес, склади", t:"18 місяців", was:["оборотка в закупівлях","уся родина залежала від одного складу","особистих накопичень не було"], res:[["$520 000+","виведено невиплачених дивідендів"],["✓","створена дивідендна політика"]]},
+  prod:     {n:"Виробництво, імпорт, B2B", t:"6 місяців", was:["фінансові зобов'язання","інвестиції в мінусі, спроби відігратися","рішення викликають напругу"], res:[["$10 000 ×2","системний дохід власника"],["$32 000","сформований інвестпортфель, закриті зобов'язання"]]},
+  build:    {n:"Будівництво, девелопмент", t:"5 місяців", was:["жив добре — $8–12 тис./міс, але капітал не створювався","залишки не накопичуються","інвестиції «на потім»"], res:[["$3 000","щомісяця системно в капітал"],["$30 000+","сформований інвестпортфель"]]},
+  it:       {n:"IT / digital-агенція", t:"3 місяці", was:["проєктний дохід","резервів немає","гроші не затримуються"], res:[["$12 400","резерв"],["$19 800","портфель під цілі"]]},
+  clinic:   {n:"Приватна клініка", t:"3 місяці", was:["дохід залежить від особистого прийому","немає особистої зарплати","обладнання «з обороту»"], res:[["$4 200","резерв"],["$12 400","капітал поза клінікою"]]}
+};
+var CASE_ORDER = { "": ["fashion","it","goods","prod","build","clinic"], stock: ["fashion","goods","prod","it","build","clinic"], service: ["it","build","clinic","fashion","goods","prod"] };
+var TESTIMONIALS = [
+  {id:"kuz", ph:"assets/clients/yaroslav-kuzmich.jpg", logo:"assets/logos/yarmich.png", name:"Ярослав Кузьміч", role:"Засновник · YARMICH, чоловічий класичний одяг", q:"Я думав, що проблема у тому, що мало заробляю. Виявилось — у тому, як я розпоряджаюсь тим, що маю. За 7 місяців з BRAVE CAPITAL я вперше зрозумів, де мої гроші і як вони мають працювати."},
+  {id:"shch", ph:"assets/clients/ivan-shchebetun.jpg", logo:"assets/logos/unit-development.jpg", name:"Іван Щебетун", role:"Власник · UNIT Development, будівельна компанія", q:"Бізнес навчив мене заробляти. А що робити з грошима далі — цього не вчить ніхто. З BRAVE CAPITAL у мене вперше виникла система, а не інтуїція."},
+  {id:"boh", ph:"assets/clients/yuriy-bohoslavets.jpg", logo:"assets/logos/dsn-group.png", name:"Юрій Богославець", role:"Власник · DSN Group, спортивне харчування", q:"Фінансовий радник — це не про те, щоб він заробляв тобі гроші. Це про те, щоб ти сам нарешті розумів, що відбувається з твоїм капіталом і куди ти рухаєшся."},
+  {id:"poh", ph:"assets/clients/olena-pohlyad.jpg", logo:"assets/logos/voir-brand.jpg", name:"Олена Погляд", role:"Власниця · VOIR, весільні аксесуари", q:"Раніше вільні гроші просто лежали в бізнесі. Тепер я розумію: робота з капіталом — окрема справа, і я більше її не уникаю."}
+];
+var TST_ORDER = { "": ["kuz","shch","boh","poh"], stock: ["kuz","poh","boh","shch"], service: ["shch","boh","kuz","poh"] };
+var WALL = [{"f": "assets/clients/artem-dovbyk.jpg", "n": "Артем Довбик", "r": "Гравець збірної України з футболу та AS Roma"}, {"f": "assets/clients/mykhaylo-haychuk-ta-taras-drovorub.jpg", "n": "Михайло Гайчук та Тарас Дроворуб", "r": "Засновники GDC — міжнародна консалтингова компанія"}, {"f": "assets/clients/illya-litun.jpg", "n": "Ілля Літун", "r": "Засновник · EdTech"}, {"f": "assets/clients/yaroslav-kazo.jpg", "n": "Ярослав Казьо", "r": "Засновник · стоматологія"}, {"f": "assets/clients/pavlo-kamchatnyy.jpg", "n": "Павло Камчатний", "r": "Засновник · бренд"}, {"f": "assets/clients/oleksiy-smokvyna.jpg", "n": "Олексій Смоквина", "r": "Засновник BERSERK — чоловічий клуб"}, {"f": "assets/clients/vitaliy-tretyak.jpg", "n": "Віталій Третяк", "r": "CEO Key2Biz · юридична компанія"}, {"f": "assets/clients/yuliya-cheban.jpg", "n": "Юлія Чебан", "r": "Засновниця Cheban Agency · INS PER"}, {"f": "assets/clients/taras-tymofiychuk.jpg", "n": "Тарас Тимофійчук", "r": "Засновник DL · бренд одягу"}, {"f": "assets/clients/kyryl-kyrychenko.jpg", "n": "Кирил Кириченко", "r": "Засновник · 1571 Private Archive"}, {"f": "assets/clients/andriy-tertyshnyk.jpg", "n": "Андрій Тертишник", "r": "Співвласник fint8 · фінансові директори на аутсорсі для МСБ"}, {"f": "assets/clients/stas-hulyayev.jpg", "n": "Стас Гуляєв", "r": "Засновник Life Craft · освіта"}, {"f": "assets/clients/vasyl-prus.jpg", "n": "Василь Прус", "r": "Співвласник · AFA"}, {"f": "assets/clients/robert-mytrychko.jpg", "n": "Роберт Митричко", "r": "Співзасновник компанії Mytrychko Syma"}, {"f": "assets/clients/ivan-druzyuk.jpg", "n": "Іван Друзюк", "r": "Засновник SHYSHKA TREES, «Надслучанська Швейцарія» — відпочинкові комплекси"}, {"f": "assets/clients/maks-khalaberda.jpg", "n": "Макс Халаберда", "r": "Засновник Get Visa Agency"}, {"f": "assets/clients/oleksandra-klepchenko.jpg", "n": "Олександра Клепченко", "r": "Продюсерка YouTube-проєктів та відеопродакшну"}, {"f": "assets/clients/yukhym-konoplya.jpg", "n": "Юхим Конопля", "r": "Гравець збірної України з футболу та Borussia Mönchengladbach"}, {"f": "assets/clients/oleksandr-isayev.jpg", "n": "Олександр Ісаєв", "r": "Засновник Школи коучингу Phase 2.0"}, {"f": "assets/clients/denys-volosov.jpg", "n": "Денис Волосов", "r": "Засновник Люди.Digital та THE DVIZH"}, {"f": "assets/clients/andriy-senkiv.jpg", "n": "Андрій Сеньків", "r": "Засновник Elektra — імпорт та обслуговування електромобілів"}, {"f": "assets/clients/mykola-ishchenko.jpg", "n": "Микола Іщенко", "r": "Співзасновник HireBox UA — тестова платформа для оцінки кандидатів і співробітників на основі технології ВПС США HireBox"}, {"f": "assets/clients/oles-varenyk.jpg", "n": "Олесь Вареник", "r": "Професор, доктор юридичних наук, колекціонер, Президент Клубу Investhub"}, {"f": "assets/clients/pavlo-ta-hanna-petryha.jpg", "n": "Павло та Ганна Петрига", "r": "Співзасновники Pálko design atelier — сфера дизайну"}, {"f": "assets/clients/anna-vozna.jpg", "n": "Анна Возна", "r": "Спеціаліст з неврології, автор методу «Без тривоги». Ключовий консультант у сфері високих технологій"}, {"f": "assets/clients/ulyana-kashchiy.jpg", "n": "Уляна Кащій", "r": "Підприємиця у сфері медицини"}, {"f": "assets/clients/artem-lyundovskyy.jpg", "n": "Артем Люндовський", "r": "Засновник M99 — креативна студія відеопродакшину"}, {"f": "assets/clients/andriy-smal.jpg", "n": "Андрій Смаль", "r": "Засновник ItUa — нішеві CRM/ERP/AI-рішення"}, {"f": "assets/clients/ivan-pervoy.jpg", "n": "Іван Первой", "r": "Засновник середовища для підлітків"}, {"f": "assets/clients/ira-vakhitova.jpg", "n": "Іра Вахітова", "r": "Співзасновниця платформи онлайн-освіти New Look School, інфлуенсерка, маркетологиня"}, {"f": "assets/clients/yuriy-hladkyy.jpg", "n": "Юрій Гладкий", "r": "Засновник маркетингової агенції GRAPE; співзасновник селища Kryla Karpaty by Edem; засновник програми Titanium Marketing для підприємців"}];
+
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); }
+function $(s, el){ return (el || document).querySelector(s); }
+
+function renderStory(){
+  $("#h1").innerHTML = H1[STORY];
+  var base = PAINS[""], own = PAINS[STORY] || [];
+  $("#pains").innerHTML = base.map(function(p, i){
+    var x = own[i] || p;
+    return '<article class="pain"><span class="pain__n">0' + (i+1) + '</span><h3 class="h3">' + esc(x[0]) + '</h3><p>' + esc(x[1]) + '</p>' +
+      '<div class="quote"><q>' + esc(x[2]) + '</q><cite>' + esc(x[3]) + '</cite></div></article>';
+  }).join("");
+  var order = CASE_ORDER[STORY];
+  function card(k){ var c = CASES[k];
+    return '<article class="case"><div class="case__top"><div class="case__meta"><span>' + esc(c.n) + '</span><span>' + esc(c.t) + '</span></div>' +
+      '<ul class="case__was">' + c.was.map(function(w){ return '<li>' + esc(w) + '</li>'; }).join("") + '</ul></div>' +
+      '<div class="case__res"><span class="lbl">Стало</span>' + c.res.map(function(r){ return '<div class="case__num"><b>' + esc(r[0]) + '</b><span>' + esc(r[1]) + '</span></div>'; }).join("") + '</div></article>';
+  }
+  $("#cases").innerHTML = order.slice(0,3).map(card).join("");
+  $("#casesMore").innerHTML = order.slice(3).map(card).join("");
+  var tmap = {}; TESTIMONIALS.forEach(function(t){ tmap[t.id] = t; });
+  $("#tst").innerHTML = TST_ORDER[STORY].map(function(id){ var t = tmap[id];
+    return '<article class="tcard"><div class="tcard__ph"><img src="' + t.ph + '" alt="' + esc(t.name) + '" loading="lazy"></div>' +
+      '<div class="tcard__body"><q>' + esc(t.q) + '</q><div class="tcard__who"><div class="tcard__person"><img class="tcard__av" src="' + t.ph + '" alt="" loading="lazy" width="56" height="56"><div><b>' + esc(t.name) + '</b><span>' + esc(t.role) + '</span></div></div>' +
+      '<img class="tcard__logo" src="' + t.logo + '" alt="" loading="lazy"></div></div></article>';
+  }).join("");
+}
+
+function renderWall(){
+  if (!WALL.length) return;
+  var half = Math.ceil(WALL.length / 2);
+  var rows = [WALL.slice(0, half), WALL.slice(half)];
+  $("#wall").innerHTML = rows.map(function(row){
+    var items = row.map(function(c){
+      return '<figure class="wt"><div class="wt__ph"><img class="gs" src="' + c.f + '" alt="' + esc(c.n) + '" loading="lazy" width="150" height="188"></div>' +
+        '<figcaption><b>' + esc(c.n) + '</b><span>' + esc(c.r) + '</span></figcaption></figure>';
+    }).join("");
+    return '<div class="marquee__row">' + items + items.replace(/<figure class="wt">/g, '<figure class="wt" aria-hidden="true">') + '</div>';
+  }).join("");
+}
+
+$("#moreCases").addEventListener("click", function(){
+  var m = $("#casesMore"); m.hidden = !m.hidden;
+  this.textContent = m.hidden ? "Ще кейси" : "Згорнути";
+});
+
+/* =========================================================
+   2. Калькулятор зарплати власника (режим UA, $)
+   Формули — як у 4_brave_calculator.md
+   ========================================================= */
+var PROFIT = [["до $2 тис.",1500],["$2–5 тис.",3500],["$5–10 тис.",7500],["$10–20 тис.",15000],["$20–40 тис.",30000],["понад $40 тис.",50000]];
+var EXPENSES = [["до $1,5 тис.",1000],["$1,5–3 тис.",2250],["$3–5 тис.",4000],["$5–10 тис.",7500],["понад $10 тис.",12500]];
+var WEAK = [["Майже як звичайний",{k10:8,b100:10,zero:false}],["Близько 70% від звичайного",{k10:7,b100:10,zero:false}],["Приблизно половина",{k10:6,b100:15,zero:false}],["Нуль або мінус",{k10:5,b100:15,zero:true}]];
+var REINV = [["До 20%",15],["20–40%",30],["40–60%",50],["Понад 60%",65]];
+var PAY = [["Фіксовану суму щомісяця","fixed"],["За потребою, коли треба","need"],["Майже нічого не беру","none"]];
+var RESERVE = [["Таких грошей поки немає",0],["До 3 місяців",1.5],["3–6 місяців",4.5],["6–12 місяців",9],["Понад рік",12]];
+
+var STEPS = [
+  {id:"profit", opts:PROFIT, q:"Скільки бізнес заробляє чистими в середньому за місяць?", hint:"Після зарплат команди, податків і всіх витрат — до того, як ви взяли щось собі. Приблизно — нормально."},
+  {id:"weak", opts:WEAK, q:"Яким буває найслабший місяць року?", hint:"Порівняно зі звичайним місяцем за прибутком."},
+  {id:"reinvest", opts:REINV, q: STORY === "service" ? "Яка частина прибутку зазвичай повертається в команду, найм і розвиток?" : STORY === "stock" ? "Яка частина прибутку зазвичай повертається в товар, закупівлі й розвиток?" : "Яка частина прибутку зазвичай повертається в бізнес: товар, команду, розвиток?", hint:"Грубо, за останній рік."},
+  {id:"pay", opts:PAY, q:"Як ви зараз берете гроші собі?", hint:""},
+  {id:"expenses", opts:EXPENSES, q:"Скільки на місяць витрачає ваша родина?", hint:"Усе разом: житло, діти, авто, відпочинок."},
+  {id:"reserve", opts:RESERVE, q:"На скільки місяців життя родини вистачить особистих грошей, які лежать поза бізнесом?", hint:"Питаємо в місяцях, а не в сумах: так простіше і приватніше."}
+];
+
+var LS = "brave_calc_ua_v2";   // v2: без питання про тип бізнесу
+var st = {a:{}, step:0, done:false, started:false};
+function save(){ try{ localStorage.setItem(LS, JSON.stringify(st)); }catch(e){} }
+function load(){
+  try{ var s = JSON.parse(localStorage.getItem(LS) || "null"); if (s && s.a) st = s; }catch(e){}
+}
+
+function compute(a){
+  var P = PROFIT[a.profit][1], w = WEAK[a.weak][1], r100 = REINV[a.reinvest][1], E = EXPENSES[a.expenses][1], M0 = RESERVE[a.reserve][1];
+  var own100 = 100 - r100 - w.b100, O = P * own100 / 100, S = O * w.k10 / 10, Dm = O - S;
+  var A = Math.max(O - E, 0), G = Math.max(E - S, 0), Tm = w.zero ? 9 : 6, RG = Math.max(Tm - M0, 0) * E;
+  var K = (A > 0 && RG > 0) ? Math.ceil(RG / A - 1e-9) : null;
+  var T12 = 12 * A, toRes = Math.min(RG, T12), rest = T12 - toRes;
+  var p3 = Math.round(own100 * w.k10 / 10), pct = [r100, w.b100, p3, 100 - r100 - w.b100 - p3];
+  var D = Math.max(E - O, 0), run = (D > 0 && M0 > 0) ? M0 * E / D : null;
+  var tag = (P >= 10000 || (M0 >= 12 && P >= 5000)) ? "hot" : ((A === 0 || (P === 1500 && w.zero)) ? "nurture" : "warm");
+  return {P:P,O:O,S:S,Dm:Dm,A:A,G:G,D:D,run:run,cover:Math.min(S / E, 1),E:E,M0:M0,Tm:Tm,RG:RG,K:K,T12:T12,toRes:toRes,rest:rest,pct:pct,parts:[P*r100/100,P*w.b100/100,S,Dm],tag:tag,k:w.k10/10,r:r100/100};
+}
+function rnd(x){ var s = x < 1000 ? 50 : 100; return Math.round(x / s) * s; }
+function money(x, raw){ return "$" + (raw ? x : rnd(x)).toLocaleString("uk-UA"); }
+function months(m){ return m >= 12 ? "понад 12" : String(m).replace(".", ","); }
+
+function questions(a, c){
+  var o = [];
+  if (c.A === 0){
+    o.push("Звідки зараз покриваються витрати родини понад прибуток бізнесу — і наскільки це стійко?");
+    o.push("Як бізнесу вийти на прибуток, з якого можна стабільно платити вам і родині?");
+  }
+  if (c.G > 0 && c.A > 0) o.push("Як закрити різницю між зарплатою, яку бізнес витримує стабільно, і витратами родини?");
+  var pay = PAY[a.pay][1];
+  if (pay === "need") o.push("Як перейти від «беру за потребою» до фіксованої суми без касового розриву?");
+  if (pay === "none") o.push("Скільки ви можете платити собі вже зараз — і що для цього має змінитися в бізнесі?");
+  if (pay === "fixed") o.push("Чи відповідає ваша нинішня сума тому, що бізнес реально витримує?");
+  if (c.k <= 0.6) o.push("Який резерв бізнесу потрібен, щоб платити собі однаково і в слабкі місяці?");
+  if (c.r >= 0.5) o.push(STORY === "stock" ? "Скільки грошей справді мусить бути в товарі, а скільки можна поступово переводити в особисті?" : "Скільки прибутку справді мусить іти в бізнес, а скільки — вам?");
+  if (c.M0 < 3) o.push("Де і в якому вигляді тримати резерв родини, щоб він не повертався в бізнес?");
+  if (c.M0 >= 12) o.push("Запас уже є. Скільки з нього справді має лежати, а яку роботу може виконувати решта?");
+  o.push("Як бачити всі свої гроші на одній сторінці раз на місяць — без ще однієї таблиці?");
+  return o.slice(0, 3);
+}
+
+var cview = document.getElementById("cview");
+function paint(html, focusSel){
+  cview.innerHTML = '<div class="view">' + html + '</div>';
+  var f = focusSel && cview.querySelector(focusSel);
+  if (f){ f.setAttribute("tabindex", "-1"); f.focus({preventScroll:true}); }
+}
+
+var interacted = false;
+function step(){
+  var s = STEPS[st.step], n = STEPS.length, q = typeof s.q === "function" ? s.q(st.a) : s.q;
+  var html = '<div class="tape" aria-hidden="true"><div class="tape__track"><div class="tape__fill" style="width:' + (st.step / n * 100) + '%"></div></div><span class="tape__n">КРОК ' + (st.step + 1) + ' / ' + n + '</span></div>' +
+    '<p class="sr">Крок ' + (st.step + 1) + ' з ' + n + '</p><h3 class="q" id="cq">' + esc(q) + '</h3>' + (s.hint ? '<p class="hint">' + esc(s.hint) + '</p>' : '') +
+    '<div class="opts" role="group" aria-labelledby="cq">' + s.opts.map(function(o, i){
+      return '<button type="button" class="opt" data-i="' + i + '" aria-pressed="' + (st.a[s.id] === i) + '">' + esc(o[0]) + '</button>';
+    }).join("") + '</div>' +
+    '<div class="cnav"><button type="button" class="linkbtn" id="cBack"' + (st.step === 0 ? ' style="visibility:hidden"' : '') + '>← Назад</button><button type="button" class="btn btn--ink btn--sm" id="cNext"' + (st.a[s.id] === undefined ? " disabled" : "") + '>' + (st.step === n - 1 ? "Показати результат" : "Далі") + ' <span class="arr">→</span></button></div>';
+  paint(html, interacted ? "#cq" : null);
+  requestAnimationFrame(function(){ var f = cview.querySelector(".tape__fill"); if (f) f.style.width = ((st.step + 1) / n * 100) + "%"; });
+  cview.querySelectorAll(".opt").forEach(function(b){
+    b.onclick = function(){
+      if (!st.started){ st.started = true; track("calc_start"); }
+      st.a[s.id] = +b.getAttribute("data-i");
+      cview.querySelectorAll(".opt").forEach(function(x){ x.setAttribute("aria-pressed", String(x === b)); });
+      $("#cNext").disabled = false; save(); setTimeout(next, 220);
+    };
+  });
+  $("#cBack").onclick = function(){ if (st.step > 0){ st.step--; save(); step(); } };
+  $("#cNext").onclick = next;
+}
+function next(){
+  interacted = true;
+  track("calc_step", {step: st.step + 1});
+  if (st.fix){ st.fix = false; st.done = true; save(); result(true); scrollCalcIntoView(); return; }   // повернулись лише уточнити прибуток
+  if (st.step < STEPS.length - 1){ st.step++; save(); step(); }
+  else { st.done = true; save(); result(true); scrollCalcIntoView(); }
+}
+function scrollCalcIntoView(){ var r = document.querySelector(".calc").getBoundingClientRect(); if (r.top < 0 || r.top > window.innerHeight * .5) document.querySelector(".calc").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start"}); }
+
+var lastCalc = null;
+function result(fresh){
+  var a = st.a, c = compute(a); lastCalc = {a:a, c:c};
+  if (fresh) track("calc_complete", {lead_tag: c.tag});
+  var labels = ["Оборот і розвиток","Резерв бізнесу","Зарплата власника","Поза бізнес"], cols = ["var(--seg-1)","var(--seg-2)","var(--seg-3)","var(--seg-4)"];
+  var h = '<p class="eyebrow" style="color:var(--muted)">Ваш орієнтир</p>';
+  h += '<div class="rb"><h3 class="q" style="margin:0">Зарплата власника</h3><p class="big">≈ ' + money(c.S) + '<small>на місяць</small></p>' +
+       '<p>Цю суму бізнес може стабільно платити вам щомісяця — і в слабкий місяць теж, не чіпаючи оборот.</p>';
+  if (c.G > 0){
+    var cov = Math.max(1, Math.round(c.cover * 100));
+    h += '<div class="cover"><div class="cover__top"><span>Покриває витрат родини</span><b>' + cov + '%</b></div>' +
+         '<div class="cover__bar" aria-hidden="true"><i style="width:' + cov + '%"></i></div>' +
+         '<div class="cover__legend"><span>зарплата ' + money(c.S) + '</span><span>витрати ' + money(c.E, true) + '</span></div></div>';
+    if (c.A > 0) h += '<p class="note">Різницю ≈ ' + money(c.G) + ' на місяць поки доведеться брати з частини «поза бізнес», тому відкладати виходить менше. Як вирівняти зарплату і витрати — перше питання для розбору.</p>';
+    else h += '<p class="note">Навіть якщо забирати собі всю частку власника (≈ ' + money(c.O) + '), родині бракує ≈ ' + money(c.D) + ' на місяць. Зараз їх дає щось інше: інший дохід родини, гроші з обороту чи борги.' +
+              (c.run ? ' Якщо покривати різницю лише з особистого запасу, його вистачить приблизно на ' + (c.run >= 12 ? 'рік і більше' : Math.max(1, Math.round(c.run)) + ' міс.') : '') +
+              ' Звідки саме і наскільки це стійко — перше питання для розбору.</p>' +
+              '<p class="fixline">Вказали прибуток уже після того, як забрали гроші собі? Тоді зарплата власника буде вищою. <button type="button" class="linkbtn" id="cFix">Уточнити прибуток</button></p>';
+  }
+  h += '</div>';
+  h += '<div class="rb"><p class="eyebrow" style="margin:0;color:var(--muted)">Розкрій вашого прибутку · ' + money(c.P, true) + ' / міс</p><h3 class="q" style="margin:6px 0 0">Правило розподілу прибутку</h3>' +
+       '<div class="cut" role="img" aria-label="' + labels.map(function(l, i){ return l + " " + c.pct[i] + "%"; }).join(", ") + '">' + c.pct.map(function(p, i){ return '<i style="width:' + p + '%;background:' + cols[i] + '"></i>'; }).join("") + '</div>' +
+       '<div class="ruler" aria-hidden="true"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></div><ul class="legend">' +
+       c.pct.map(function(p, i){ return '<li><span class="sw" style="background:' + cols[i] + '"></span><span>' + labels[i] + '</span><span class="pc">' + p + '%</span><span class="amt">≈ ' + money(Math.round(c.parts[i] / 50) * 50, true) + ' на місяць</span></li>'; }).join("") +
+       '</ul><p>' + (c.A === 0 ? "Поки прибуток не покриває витрат родини, частина «поза бізнес» фактично йде на життя." : "Частину «поза бізнес» зручно забирати раз на квартал — це ваш «дивіденд собі»: ≈ " + money(c.Dm * 3) + ".") + '</p></div>';
+  if (c.A > 0){
+    h += '<div class="rb"><h3 class="q" style="margin:0">Запас міцності родини</h3>';
+    if (c.RG === 0) h += '<p>Запас уже є — ' + months(c.M0) + ' міс. Питання вже не «скільки відкласти», а «яку роботу мають виконувати ці гроші».</p>';
+    else h += '<div class="stats"><div class="stat"><div class="k">Зараз</div><div class="v">' + (c.M0 === 0 ? "0" : "≈ " + months(c.M0)) + ' міс.</div></div><div class="stat"><div class="k">Ціль</div><div class="v">' + c.Tm + ' міс.</div></div><div class="stat"><div class="k">Дійдете</div><div class="v">≈ за ' + c.K + ' міс.</div></div></div>';
+    h += '</div>';
+    var sub = c.RG === 0 ? "Запас міцності вже є, тож усе це — під ваші цілі." : (c.rest <= 0 ? "Усе піде в запас міцності родини." : "З них у запас міцності — " + money(c.toRes) + ", решта — під ваші цілі.");
+    h += '<div class="rb"><h3 class="q" style="margin:0">Через 12 місяців поза бізнесом</h3><p class="big">≈ ' + money(c.T12) + '</p><p>' + sub + ' Без жодних інвестиційних припущень: тільки регулярність.</p></div>';
+  }
+  h += '<div class="rb"><h3 class="q" style="margin:0">3 питання для розбору з радником</h3><ol class="qs">' + questions(a, c).map(function(t){ return '<li>' + esc(t) + '</li>'; }).join("") + '</ol></div>';
+  h += '<details><summary>Як ми рахували</summary><ol>' +
+       '<li><b>Частка власника</b> — прибуток мінус частина на оборот і розвиток і мінус резерв бізнесу (10–15%, залежно від того, наскільки просідають слабкі місяці).</li>' +
+       '<li><b>Зарплата власника</b> — 50–80% частки власника. Що сильніше просідають слабкі місяці, то обережніша сума.</li>' +
+       '<li><b>Решта частки власника</b> — гроші поза бізнесом. Зручно забирати раз на квартал.</li>' +
+       '<li><b>Витрати родини і особистий запас на зарплату власника не впливають</b>: вона залежить лише від бізнесу. Від них залежить, скільки лишається відкласти і як швидко набереться запас.</li>' +
+       '<li><b>Відкладати можна</b> різницю між часткою власника і витратами родини.</li>' +
+       '<li><b>Ціль запасу міцності</b> — 6 місяців витрат родини, або 9, якщо бувають місяці з нулем.</li>' +
+       '<li><b>Інвестиційний дохід не враховуємо.</b> Податки на виплати собі (наприклад, на дивіденди) теж не враховано — це питання до бухгалтера.</li>' +
+       '</ol><p>Це орієнтир за вашими відповідями в діапазонах, а не індивідуальна фінансова, податкова чи інвестиційна рекомендація.</p></details>';
+  h += '<div class="cbox"><h3>Розберіть свій результат за 20 хвилин</h3><p>Радник BRAVE перевірить цифри і відповість на ці 3 питання. Онлайн, безкоштовно, без зобов’язань.</p>' +
+       '<div class="cbox__row"><button type="button" class="btn" id="cLead">Розібрати мій результат <span class="arr">→</span></button><button type="button" class="linkbtn" id="cAgain">Перерахувати</button></div></div>';
+  paint(h, fresh ? ".eyebrow" : null);
+  $("#cLead").onclick = function(){
+    track("cta_breakdown_click", {lead_tag: c.tag});
+    openModal({title:"Розберіть свій результат за 20 хвилин", sub:"Радник перевірить ваш розрахунок і відповість на 3 питання. Онлайн, безкоштовно, без зобов’язань.", source:"calc"});
+  };
+  var fix = $("#cFix");
+  if (fix) fix.onclick = function(){ track("calc_fix_profit"); st.done = false; st.fix = true; st.step = 0; save(); step(); };
+  $("#cAgain").onclick = function(){ st = {a:{}, step:0, done:false, started:true}; save(); step(); };
+}
+
+function calcHidden(){
+  if (!lastCalc) return null;
+  var a = lastCalc.a, c = lastCalc.c;
+  return { story: STORY || null, profit_range: PROFIT[a.profit][0], weak_month: WEAK[a.weak][0], reinvest_range: REINV[a.reinvest][0],
+    pay_mode: PAY[a.pay][1], expenses_range: EXPENSES[a.expenses][0], reserve_months: RESERVE[a.reserve][0],
+    salary_est: rnd(c.S), outside_monthly_est: rnd(c.Dm), months_to_reserve: c.K, lead_tag: c.tag };
+}
+
+/* =========================================================
+   3. Телефон: код країни + маска (intl-tel-input, як на Lagoon)
+   Країна визначається один раз за IP, кешується в localStorage
+   і змінюється вручну через прапорець. Кілька безкоштовних
+   сервісів по черзі; якщо всі впали — Україна (не кешується).
+   ========================================================= */
+var geoPromise;
+var GEO_PROVIDERS = [
+  { url: "https://api.country.is/",                 pick: function(d){ return d.country; } },
+  { url: "https://ipwho.is/",                       pick: function(d){ return d.country_code; } },
+  { url: "https://get.geojs.io/v1/ip/country.json", pick: function(d){ return d.country; } },
+  { url: "https://ipapi.co/json/",                  pick: function(d){ return d.country_code; } }
+];
+function fetchJson(url, ms){
+  var ctrl = new AbortController(), t = setTimeout(function(){ ctrl.abort(); }, ms);
+  return fetch(url, {signal: ctrl.signal}).then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); }).finally(function(){ clearTimeout(t); });
+}
+function lookupCountry(){
+  if (geoPromise) return geoPromise;
+  var cached = null; try{ cached = localStorage.getItem("brave_iso"); }catch(e){}
+  if (cached){ geoPromise = Promise.resolve(cached); return geoPromise; }
+  geoPromise = (async function(){
+    for (var i = 0; i < GEO_PROVIDERS.length; i++){
+      try{
+        var d = await fetchJson(GEO_PROVIDERS[i].url, 3500), cc = GEO_PROVIDERS[i].pick(d);
+        if (cc && /^[a-z]{2}$/i.test(cc)){ var iso = cc.toLowerCase(); try{ localStorage.setItem("brave_iso", iso); }catch(e){} return iso; }
+      }catch(e){ /* сервіс не відповів — пробуємо наступний */ }
+    }
+    return GEO_FALLBACK;
+  })();
+  return geoPromise;
+}
+var itiUk = {};
+var i18nReady = import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/i18n/uk/index.js").then(function(m){ itiUk = m.default || {}; }).catch(function(){});
+var itiMap = {};
+function initPhone(input){
+  if (!input || !window.intlTelInput || itiMap[input.id]) return;
+  itiMap[input.id] = window.intlTelInput(input, {
+    initialCountry: "auto",
+    geoIpLookup: function(cb){ lookupCountry().then(cb); },
+    strictMode: true,          // лише цифри і не довше за реальний номер країни
+    countrySearch: true,       // пошук країни у списку
+    separateDialCode: true,    // +код поруч із прапорцем
+    countryOrder: ["ua","pl","de","cz","es","gb","us","ae"],
+    dropdownContainer: document.body,
+    i18n: itiUk
+  });
+}
+i18nReady.then(function(){ document.querySelectorAll('input[type="tel"]').forEach(initPhone); });
+
+/* =========================================================
+   4. Форми: одна розмітка на всі місця — модалка для кожного CTA,
+   дві форми посередині сторінки і форма у фіналі.
+   «Коли вам зручно?» з'являється лише для каналу «Дзвінок».
+   ========================================================= */
+function formHTML(fid, source){
+  function chip(name, value, label, checked){
+    return '<label class="chip"><input type="radio" name="' + name + '" value="' + value + '"' + (checked ? " checked" : "") + '><span>' + label + '</span></label>';
+  }
+  return '<form class="form" data-form data-source="' + source + '" novalidate>' +
+    '<div class="field"><label for="' + fid + '_name">Як до вас звертатися?</label><input class="input" id="' + fid + '_name" name="name" autocomplete="given-name" placeholder="Олена"><div class="err" data-err="name">Напишіть, як до вас звертатися.</div></div>' +
+    '<div class="field"><label for="' + fid + '_phone">Номер телефону</label><input class="input" id="' + fid + '_phone" name="phone" type="tel" autocomplete="tel"><div class="err" data-err="phone">Перевірте номер: схоже, в ньому не вистачає цифр.</div></div>' +
+    '<div class="field"><span class="lbl">Де зручніше спілкуватися?</span><div class="chips">' +
+      chip("channel", "telegram", "Telegram", true) + chip("channel", "whatsapp", "WhatsApp") + chip("channel", "viber", "Viber") + chip("channel", "call", "Дзвінок") +
+    '</div></div>' +
+    '<div class="field" data-time hidden><span class="lbl">Коли вам зателефонувати? <span class="opt-l">(необов\'язково)</span></span><div class="chips">' +
+      chip("time", "morning", "Зранку") + chip("time", "day", "Вдень") + chip("time", "evening", "Увечері") +
+    '</div></div>' +
+    '<button type="submit" class="btn btn--block">Записатися на розбір <span class="arr">→</span></button>' +
+    '<p class="form__legal">Натискаючи кнопку, ви погоджуєтеся з <a href="#" class="todo" title="ПІДТВЕРДИТИ посилання">Політикою конфіденційності</a>. Радник зв’яжеться з вами протягом <span class="todo" title="ПІДТВЕРДИТИ SLA">робочого дня</span>. Жодних розсилок.</p>' +
+    '</form><div class="form__ok" data-ok></div>';
+}
+document.querySelectorAll("[data-form-slot]").forEach(function(slot){
+  slot.innerHTML = formHTML(slot.getAttribute("data-fid"), slot.getAttribute("data-form-slot"));
+});
+
+var modal = $("#leadModal"), lastFocus = null, mSource = "modal";
+function openModal(ctx){
+  lastFocus = document.activeElement;
+  $("#mTitle").textContent = ctx.title; $("#mSub").textContent = ctx.sub; mSource = ctx.source;
+  var f = modal.querySelector("[data-form]"), ok = modal.querySelector("[data-ok]");
+  f.hidden = false; ok.classList.remove("show");
+  modal.classList.add("open"); modal.setAttribute("aria-hidden", "false"); document.body.classList.add("modal-open");
+  setTimeout(function(){ $("#m_name").focus(); }, 60);
+  track("lead_form_open", {source: ctx.source});
+}
+function closeModal(){
+  modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); document.body.classList.remove("modal-open");
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
+}
+modal.addEventListener("click", function(e){ if (e.target.hasAttribute("data-close")) closeModal(); });
+document.addEventListener("keydown", function(e){ if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+document.querySelectorAll("[data-lead]").forEach(function(b){
+  b.addEventListener("click", function(){
+    openModal({title:"Записатися на розбір", sub:"20 хвилин онлайн з радником BRAVE: подивимось на ваші гроші і скажемо чесно, чи є сенс іти далі. Безкоштовно і без зобов’язань.", source: b.getAttribute("data-lead")});
+  });
+});
+document.querySelectorAll("[data-track]").forEach(function(a){ a.addEventListener("click", function(){ track("cta_click", {cta: a.getAttribute("data-track")}); }); });
+
+function setErr(form, key, on){
+  var el = form.querySelector('[data-err="' + key + '"]'), inp = form.querySelector('[name="' + key + '"]');
+  if (el) el.classList.toggle("show", on); if (inp) inp.setAttribute("aria-invalid", String(on));
+}
+function validate(form){
+  var name = form.querySelector('[name="name"]'), phone = form.querySelector('[name="phone"]'), iti = itiMap[phone.id];
+  var okN = name.value.trim().length > 0;
+  var okP = iti ? (phone.value.trim() !== "" && iti.isValidNumber()) : phone.value.replace(/\D/g, "").length >= 9;
+  setErr(form, "name", !okN); setErr(form, "phone", !okP);
+  if (!okN){ name.focus(); return false; }
+  if (!okP){ phone.focus(); return false; }
+  return true;
+}
+var TIME_LABEL = {morning:"зранку", day:"вдень", evening:"увечері"};
+document.querySelectorAll("[data-form]").forEach(function(form){
+  var timeField = form.querySelector("[data-time]");
+  function syncTime(){
+    var isCall = form.channel.value === "call";
+    timeField.hidden = !isCall;
+    if (!isCall) form.querySelectorAll('[name="time"]').forEach(function(r){ r.checked = false; });
+  }
+  form.querySelectorAll('[name="channel"]').forEach(function(r){ r.addEventListener("change", syncTime); });
+  syncTime();
+  form.querySelector('[name="name"]').addEventListener("blur", function(){ if (this.value.trim()) setErr(form, "name", false); });
+  form.querySelector('[name="phone"]').addEventListener("blur", function(){ var iti = itiMap[this.id]; if (this.value.trim() && iti) setErr(form, "phone", !iti.isValidNumber()); });
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if (!validate(form)) return;
+    var phone = form.querySelector('[name="phone"]'), iti = itiMap[phone.id];
+    var source = form.getAttribute("data-source") === "modal" ? mSource : form.getAttribute("data-source");
+    var calc = source === "calc" ? calcHidden() : null;
+    var lead = {
+      name: form.name.value.trim(),
+      phone: iti ? iti.getNumber() : phone.value.trim(),                   // E.164
+      phone_country: iti ? (iti.getSelectedCountryData().iso2 || null) : null,
+      channel: form.channel.value, time: form.channel.value === "call" ? (form.time.value || null) : null,
+      source: source, story: STORY || null, calc: calc,
+      lead_tag: calc ? calc.lead_tag : "direct",
+      utm_source: qs.get("utm_source"), utm_medium: qs.get("utm_medium"), utm_campaign: qs.get("utm_campaign"), utm_content: qs.get("utm_content"), fbclid: qs.get("fbclid"),
+      page: location.pathname, ts: new Date().toISOString(),
+      event_id: "lead_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)   // той самий ID іде в Meta Pixel і в CRM
+    };
+    var btn = form.querySelector('button[type="submit"]'); btn.disabled = true;
+    var send = SUBMIT_URL ? fetch(SUBMIT_URL, {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(lead)}) : Promise.resolve();
+    send.catch(function(){}).finally(function(){
+      btn.disabled = false;
+      if (window.console) console.info("[lead → CRM]", lead);
+      track("lead_submit", {source: source, lead_tag: lead.lead_tag, event_id: lead.event_id});   // у Meta — лише тег, без фінансових діапазонів
+      var ok = form.parentElement.querySelector("[data-ok]"), ch = {telegram:"Telegram", whatsapp:"WhatsApp", viber:"Viber"}[lead.channel];
+      ok.innerHTML = '<h3>Дякуємо, ' + esc(lead.name) + '!</h3><p>' + (ch ? "Радник BRAVE напише вам у " + ch + " протягом робочого дня." : "Радник BRAVE зателефонує вам протягом робочого дня" + (lead.time ? ", " + TIME_LABEL[lead.time] + "." : ".")) + '</p>' +
+        '<p style="margin-top:16px;font-weight:600">Як пройде розбір (20 хвилин):</p><ul><li>5 хв — перевіримо ваш розрахунок або коротко подивимось на ситуацію;</li><li>10 хв — відповімо на ваші питання;</li><li>5 хв — чесно скажемо, чи є сенс іти далі — на 75-хвилинну діагностику.</li></ul>';
+      form.hidden = true; ok.classList.add("show");
+    });
+  });
+});
+
+/* =========================================================
+   5. Дрібниці: FAQ по одному, липка кнопка на мобільному
+   ========================================================= */
+/* свідоцтва: відкриваються на весь екран, стрілки й Esc працюють */
+var CERTS = [
+  {src:"assets/brand/cert-138598.jpg", alt:"Свідоцтво про реєстрацію авторського права № 138598", cap:"Методологія BRAVE PLAN · свідоцтво № 138598"},
+  {src:"assets/brand/cert-140162.jpg", alt:"Свідоцтво IFA BOOTCAMP № 140162", cap:"Програма підготовки радників IFA BOOTCAMP · свідоцтво № 140162"}
+];
+var lb = $("#lb"), lbI = 0, lbFocus = null;
+function lbShow(i){
+  lbI = (i + CERTS.length) % CERTS.length;
+  $("#lbImg").src = CERTS[lbI].src; $("#lbImg").alt = CERTS[lbI].alt; $("#lbCap").textContent = CERTS[lbI].cap;
+}
+function lbOpen(i){
+  lbFocus = document.activeElement; lbShow(i);
+  lb.classList.add("open"); lb.setAttribute("aria-hidden", "false"); document.body.classList.add("modal-open");
+  lb.querySelector("[data-lb-close]").focus();
+  track("cert_open", {cert: i});
+}
+function lbClose(){
+  lb.classList.remove("open"); lb.setAttribute("aria-hidden", "true"); document.body.classList.remove("modal-open");
+  if (lbFocus && lbFocus.focus) lbFocus.focus();
+}
+document.querySelectorAll("[data-zoom]").forEach(function(b){ b.addEventListener("click", function(){ lbOpen(+b.getAttribute("data-zoom")); }); });
+lb.addEventListener("click", function(e){
+  var stepBtn = e.target.closest("[data-lb-step]");
+  if (stepBtn){ lbShow(lbI + (+stepBtn.getAttribute("data-lb-step"))); return; }
+  if (e.target === lb || e.target.tagName === "FIGURE" || e.target.closest("[data-lb-close]")) lbClose();
+});
+document.addEventListener("keydown", function(e){
+  if (!lb.classList.contains("open")) return;
+  if (e.key === "Escape") lbClose();
+  if (e.key === "ArrowRight") lbShow(lbI + 1);
+  if (e.key === "ArrowLeft") lbShow(lbI - 1);
+});
+
+var faqs = document.querySelectorAll(".faq details");
+faqs.forEach(function(d){ d.addEventListener("toggle", function(){ if (d.open) faqs.forEach(function(o){ if (o !== d) o.open = false; }); }); });
+
+var stick = $("#stick"), calcSec = $("#calc"), heroCta = $(".hero__cta");
+if ("IntersectionObserver" in window){
+  var vis = {calc:false, hero:true}, formsOnScreen = new Set();
+  var upd = function(){ stick.classList.toggle("show", !vis.calc && !vis.hero && formsOnScreen.size === 0); };
+  var fio = new IntersectionObserver(function(en){ en.forEach(function(e){ if (e.isIntersecting) formsOnScreen.add(e.target); else formsOnScreen.delete(e.target); }); upd(); });
+  document.querySelectorAll(".band__form, .formcard").forEach(function(el){ fio.observe(el); });
+  new IntersectionObserver(function(en){ en.forEach(function(e){ vis[e.target === calcSec ? "calc" : "hero"] = e.isIntersecting; }); upd(); }).observe(calcSec);
+  new IntersectionObserver(function(en){ vis.hero = en[0].isIntersecting; upd(); }).observe(heroCta);
+  var seen = false; new IntersectionObserver(function(en){ if (!seen && en[0].isIntersecting){ seen = true; track("calc_view"); } }, {threshold:.3}).observe(calcSec);
+}
+
+/* boot */
+renderStory(); renderWall();
+load(); if (st.done) result(false); else { if (st.step < 0) st.step = 0; step(); }
+window.BRAVE = { compute: compute, questions: questions };
+})();
+</script>
+</body>
+</html>

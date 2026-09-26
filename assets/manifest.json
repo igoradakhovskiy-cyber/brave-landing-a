@@ -1,0 +1,594 @@
+[
+ {
+  "file": "clients/yaroslav-kuzmich.jpg",
+  "alt": "Ярослав Кузьміч",
+  "caption": "Ярослав Кузьміч Засновник бренду YARMICH у сфері чоловічого класичного одягу та аксесуарів",
+  "w": 400,
+  "h": 400,
+  "bytes": 15973
+ },
+ {
+  "file": "logos/yarmich.png",
+  "alt": "YARMICH",
+  "caption": "Ярослав Кузьміч Засновник бренду YARMICH у сфері чоловічого класичного одягу та аксесуарів",
+  "w": 240,
+  "h": 240,
+  "bytes": 11893
+ },
+ {
+  "file": "clients/olena-pohlyad.jpg",
+  "alt": "Олена Погляд",
+  "caption": "Олена Погляд Засновниця бренду Voir Brand у сфері весільних аксесуарів",
+  "w": 400,
+  "h": 400,
+  "bytes": 14094
+ },
+ {
+  "file": "logos/voir-brand.jpg",
+  "alt": "Voir Brand",
+  "caption": "Олена Погляд Засновниця бренду Voir Brand у сфері весільних аксесуарів",
+  "w": 109,
+  "h": 71,
+  "bytes": 3328
+ },
+ {
+  "file": "clients/yuriy-bohoslavets.jpg",
+  "alt": "Юрій Богославець",
+  "caption": "Юрій Богославець Засновник DSN Group, міжнародної компанії у сфері спортивного харчування та вітамінів",
+  "w": 319,
+  "h": 480,
+  "bytes": 15773
+ },
+ {
+  "file": "logos/dsn-group.png",
+  "alt": "DSN Group",
+  "caption": "Юрій Богославець Засновник DSN Group, міжнародної компанії у сфері спортивного харчування та вітамінів",
+  "w": 202,
+  "h": 202,
+  "bytes": 9533
+ },
+ {
+  "file": "clients/ivan-shchebetun.jpg",
+  "alt": "Іван Щебетун",
+  "caption": "Іван Щебетун Засновник UNIT Development, будівельної компанії повного циклу",
+  "w": 400,
+  "h": 400,
+  "bytes": 15476
+ },
+ {
+  "file": "logos/unit-development.jpg",
+  "alt": "UNIT Development",
+  "caption": "Іван Щебетун Засновник UNIT Development, будівельної компанії повного циклу",
+  "w": 240,
+  "h": 120,
+  "bytes": 3916
+ },
+ {
+  "file": "clients/valeriy-maksymenko.jpg",
+  "alt": "Валерій Максименко",
+  "caption": "Валерій Максименко Засновник · жіночий одяг",
+  "w": 320,
+  "h": 480,
+  "bytes": 22354
+ },
+ {
+  "file": "logos/papaya.jpg",
+  "alt": "PAPAYA",
+  "caption": "Валерій Максименко Засновник · жіночий одяг",
+  "w": 240,
+  "h": 29,
+  "bytes": 2273
+ },
+ {
+  "file": "clients/artem-dovbyk.jpg",
+  "alt": "Артем Довбик",
+  "caption": "Артем Довбик Гравець збірної України з футболу та AS Roma",
+  "w": 400,
+  "h": 400,
+  "bytes": 26777
+ },
+ {
+  "file": "logos/uaf.jpg",
+  "alt": "УАФ",
+  "caption": "Артем Довбик Гравець збірної України з футболу та AS Roma",
+  "w": 220,
+  "h": 220,
+  "bytes": 9801
+ },
+ {
+  "file": "clients/mykhaylo-haychuk-ta-taras-drovorub.jpg",
+  "alt": "Михайло Гайчук та Тарас Дроворуб",
+  "caption": "Михайло Гайчук та Тарас Дроворуб Засновники GDC — міжнародна консалтингова компанія",
+  "w": 400,
+  "h": 400,
+  "bytes": 26538
+ },
+ {
+  "file": "logos/gdc-consulting.png",
+  "alt": "GDC consulting",
+  "caption": "Михайло Гайчук та Тарас Дроворуб Засновники GDC — міжнародна консалтингова компанія",
+  "w": 157,
+  "h": 80,
+  "bytes": 9803
+ },
+ {
+  "file": "clients/illya-litun.jpg",
+  "alt": "Ілля Літун",
+  "caption": "Ілля Літун Засновник · EdTech",
+  "w": 389,
+  "h": 480,
+  "bytes": 25538
+ },
+ {
+  "file": "logos/turbo-zno.jpg",
+  "alt": "Turbo ZNO",
+  "caption": "Ілля Літун Засновник · EdTech",
+  "w": 225,
+  "h": 225,
+  "bytes": 5676
+ },
+ {
+  "file": "clients/yaroslav-kazo.jpg",
+  "alt": "Ярослав Казьо",
+  "caption": "Ярослав Казьо Засновник · стоматологія",
+  "w": 400,
+  "h": 400,
+  "bytes": 15843
+ },
+ {
+  "file": "logos/cdc-kazo.jpg",
+  "alt": "CDC.KAZO",
+  "caption": "Ярослав Казьо Засновник · стоматологія",
+  "w": 240,
+  "h": 239,
+  "bytes": 4183
+ },
+ {
+  "file": "clients/pavlo-kamchatnyy.jpg",
+  "alt": "Павло Камчатний",
+  "caption": "Павло Камчатний Засновник · бренд",
+  "w": 389,
+  "h": 480,
+  "bytes": 20833
+ },
+ {
+  "file": "logos/sebone.png",
+  "alt": "SEBONE",
+  "caption": "Павло Камчатний Засновник · бренд",
+  "w": 239,
+  "h": 239,
+  "bytes": 5923
+ },
+ {
+  "file": "clients/oleksiy-smokvyna.jpg",
+  "alt": "Олексій Смоквина",
+  "caption": "Олексій Смоквина Засновник BERSERK — чоловічий клуб",
+  "w": 400,
+  "h": 400,
+  "bytes": 25267
+ },
+ {
+  "file": "logos/berserk.png",
+  "alt": "BERSERK",
+  "caption": "Олексій Смоквина Засновник BERSERK — чоловічий клуб",
+  "w": 114,
+  "h": 72,
+  "bytes": 5794
+ },
+ {
+  "file": "clients/vitaliy-tretyak.jpg",
+  "alt": "Віталій Третяк",
+  "caption": "Віталій Третяк CEO Key2Biz · юридична компанія",
+  "w": 400,
+  "h": 400,
+  "bytes": 17775
+ },
+ {
+  "file": "logos/vitaliy-tretyak.jpg",
+  "alt": "Віталій Третяк",
+  "caption": "Віталій Третяк CEO Key2Biz · юридична компанія",
+  "w": 240,
+  "h": 240,
+  "bytes": 7984
+ },
+ {
+  "file": "clients/yuliya-cheban.jpg",
+  "alt": "Юлія Чебан",
+  "caption": "Юлія Чебан Засновниця Cheban Agency · INS PER",
+  "w": 400,
+  "h": 400,
+  "bytes": 18293
+ },
+ {
+  "file": "logos/plan-b.jpg",
+  "alt": "PLAN b",
+  "caption": "Юлія Чебан Засновниця Cheban Agency · INS PER",
+  "w": 220,
+  "h": 220,
+  "bytes": 3114
+ },
+ {
+  "file": "logos/yc.jpg",
+  "alt": "YC",
+  "caption": "Юлія Чебан Засновниця Cheban Agency · INS PER",
+  "w": 220,
+  "h": 220,
+  "bytes": 3162
+ },
+ {
+  "file": "clients/taras-tymofiychuk.jpg",
+  "alt": "Тарас Тимофійчук",
+  "caption": "Тарас Тимофійчук Засновник DL · бренд одягу",
+  "w": 400,
+  "h": 400,
+  "bytes": 10914
+ },
+ {
+  "file": "logos/taras-tymofiychuk.jpg",
+  "alt": "Тарас Тимофійчук",
+  "caption": "Тарас Тимофійчук Засновник DL · бренд одягу",
+  "w": 260,
+  "h": 260,
+  "bytes": 2357
+ },
+ {
+  "file": "clients/kyryl-kyrychenko.jpg",
+  "alt": "Кирил Кириченко",
+  "caption": "Кирил Кириченко Засновник · 1571 Private Archive",
+  "w": 400,
+  "h": 400,
+  "bytes": 35088
+ },
+ {
+  "file": "logos/kyryl-kyrychenko.jpg",
+  "alt": "Кирил Кириченко",
+  "caption": "Кирил Кириченко Засновник · 1571 Private Archive",
+  "w": 146,
+  "h": 150,
+  "bytes": 8184
+ },
+ {
+  "file": "clients/andriy-tertyshnyk.jpg",
+  "alt": "Андрій Тертишник",
+  "caption": "Андрій Тертишник Співвласник fint8 · фінансові директори на аутсорсі для МСБ",
+  "w": 400,
+  "h": 400,
+  "bytes": 12181
+ },
+ {
+  "file": "logos/andriy-tertyshnyk.png",
+  "alt": "Андрій Тертишник",
+  "caption": "Андрій Тертишник Співвласник fint8 · фінансові директори на аутсорсі для МСБ",
+  "w": 260,
+  "h": 95,
+  "bytes": 3652
+ },
+ {
+  "file": "clients/stas-hulyayev.jpg",
+  "alt": "Стас Гуляєв",
+  "caption": "Стас Гуляєв Засновник Life Craft · освіта",
+  "w": 400,
+  "h": 400,
+  "bytes": 21573
+ },
+ {
+  "file": "logos/stas-hulyayev.png",
+  "alt": "Стас Гуляєв",
+  "caption": "Стас Гуляєв Засновник Life Craft · освіта",
+  "w": 260,
+  "h": 52,
+  "bytes": 6016
+ },
+ {
+  "file": "clients/vasyl-prus.jpg",
+  "alt": "Василь Прус",
+  "caption": "Василь Прус Співвласник · AFA",
+  "w": 400,
+  "h": 400,
+  "bytes": 20305
+ },
+ {
+  "file": "logos/vasyl-prus.jpg",
+  "alt": "Василь Прус",
+  "caption": "Василь Прус Співвласник · AFA",
+  "w": 253,
+  "h": 89,
+  "bytes": 4321
+ },
+ {
+  "file": "clients/robert-mytrychko.jpg",
+  "alt": "Роберт Митричко",
+  "caption": "Роберт Митричко Співзасновник компанії Mytrychko Syma",
+  "w": 400,
+  "h": 400,
+  "bytes": 15531
+ },
+ {
+  "file": "logos/robert-mytrychko.png",
+  "alt": "Роберт Митричко",
+  "caption": "Роберт Митричко Співзасновник компанії Mytrychko Syma",
+  "w": 240,
+  "h": 62,
+  "bytes": 6736
+ },
+ {
+  "file": "clients/ivan-druzyuk.jpg",
+  "alt": "Іван Друзюк",
+  "caption": "Іван Друзюк Засновник SHYSHKA TREES, «Надслучанська Швейцарія» — відпочинкові комплекси",
+  "w": 400,
+  "h": 400,
+  "bytes": 16753
+ },
+ {
+  "file": "logos/ivan-druzyuk.jpg",
+  "alt": "Іван Друзюк",
+  "caption": "Іван Друзюк Засновник SHYSHKA TREES, «Надслучанська Швейцарія» — відпочинкові комплекси",
+  "w": 260,
+  "h": 260,
+  "bytes": 9059
+ },
+ {
+  "file": "logos/chan.jpg",
+  "alt": "ЧАН",
+  "caption": "Іван Друзюк Засновник SHYSHKA TREES, «Надслучанська Швейцарія» — відпочинкові комплекси",
+  "w": 220,
+  "h": 220,
+  "bytes": 3387
+ },
+ {
+  "file": "clients/maks-khalaberda.jpg",
+  "alt": "Макс Халаберда",
+  "caption": "Макс Халаберда Засновник Get Visa Agency",
+  "w": 400,
+  "h": 400,
+  "bytes": 13565
+ },
+ {
+  "file": "logos/maks-khalaberda.jpg",
+  "alt": "Макс Халаберда",
+  "caption": "Макс Халаберда Засновник Get Visa Agency",
+  "w": 260,
+  "h": 239,
+  "bytes": 12537
+ },
+ {
+  "file": "clients/oleksandra-klepchenko.jpg",
+  "alt": "Олександра Клепченко",
+  "caption": "Олександра Клепченко Продюсерка YouTube-проєктів та відеопродакшну",
+  "w": 400,
+  "h": 400,
+  "bytes": 13799
+ },
+ {
+  "file": "clients/yukhym-konoplya.jpg",
+  "alt": "Юхим Конопля",
+  "caption": "Юхим Конопля Гравець збірної України з футболу та Borussia Mönchengladbach",
+  "w": 400,
+  "h": 400,
+  "bytes": 21298
+ },
+ {
+  "file": "logos/uaf-2.jpg",
+  "alt": "УАФ",
+  "caption": "Юхим Конопля Гравець збірної України з футболу та Borussia Mönchengladbach",
+  "w": 220,
+  "h": 220,
+  "bytes": 9801
+ },
+ {
+  "file": "clients/oleksandr-isayev.jpg",
+  "alt": "Олександр Ісаєв",
+  "caption": "Олександр Ісаєв Засновник Школи коучингу Phase 2.0",
+  "w": 400,
+  "h": 400,
+  "bytes": 15116
+ },
+ {
+  "file": "logos/phase-2-0.png",
+  "alt": "Phase 2.0",
+  "caption": "Олександр Ісаєв Засновник Школи коучингу Phase 2.0",
+  "w": 240,
+  "h": 123,
+  "bytes": 11220
+ },
+ {
+  "file": "clients/denys-volosov.jpg",
+  "alt": "Денис Волосов",
+  "caption": "Денис Волосов Засновник Люди.Digital та THE DVIZH",
+  "w": 400,
+  "h": 400,
+  "bytes": 19216
+ },
+ {
+  "file": "logos/lyudy-digital.png",
+  "alt": "Люди.Digital",
+  "caption": "Денис Волосов Засновник Люди.Digital та THE DVIZH",
+  "w": 125,
+  "h": 80,
+  "bytes": 5131
+ },
+ {
+  "file": "clients/andriy-senkiv.jpg",
+  "alt": "Андрій Сеньків",
+  "caption": "Андрій Сеньків Засновник Elektra — імпорт та обслуговування електромобілів",
+  "w": 400,
+  "h": 400,
+  "bytes": 20277
+ },
+ {
+  "file": "logos/elektra.png",
+  "alt": "Elektra",
+  "caption": "Андрій Сеньків Засновник Elektra — імпорт та обслуговування електромобілів",
+  "w": 285,
+  "h": 80,
+  "bytes": 14521
+ },
+ {
+  "file": "clients/mykola-ishchenko.jpg",
+  "alt": "Микола Іщенко",
+  "caption": "Микола Іщенко Співзасновник HireBox UA — тестова платформа для оцінки кандидатів і співробітників на основі технології ВПС США HireBox",
+  "w": 400,
+  "h": 400,
+  "bytes": 23766
+ },
+ {
+  "file": "clients/oles-varenyk.jpg",
+  "alt": "Олесь Вареник",
+  "caption": "Олесь Вареник Професор, доктор юридичних наук, колекціонер, Президент Клубу Investhub",
+  "w": 400,
+  "h": 400,
+  "bytes": 23952
+ },
+ {
+  "file": "logos/investhub.png",
+  "alt": "Investhub",
+  "caption": "Олесь Вареник Професор, доктор юридичних наук, колекціонер, Президент Клубу Investhub",
+  "w": 65,
+  "h": 80,
+  "bytes": 1973
+ },
+ {
+  "file": "clients/pavlo-ta-hanna-petryha.jpg",
+  "alt": "Павло та Ганна Петрига",
+  "caption": "Павло та Ганна Петрига Співзасновники Pálko design atelier — сфера дизайну",
+  "w": 400,
+  "h": 400,
+  "bytes": 32488
+ },
+ {
+  "file": "logos/palko-design-atelier.png",
+  "alt": "Pálko design atelier",
+  "caption": "Павло та Ганна Петрига Співзасновники Pálko design atelier — сфера дизайну",
+  "w": 124,
+  "h": 80,
+  "bytes": 7619
+ },
+ {
+  "file": "clients/anna-vozna.jpg",
+  "alt": "Анна Возна",
+  "caption": "Анна Возна Спеціаліст з неврології, автор методу «Без тривоги». Ключовий консультант у сфері високих технологій Без тривоги",
+  "w": 400,
+  "h": 400,
+  "bytes": 41051
+ },
+ {
+  "file": "clients/ulyana-kashchiy.jpg",
+  "alt": "Уляна Кащій",
+  "caption": "Уляна Кащій Підприємиця у сфері медицини",
+  "w": 400,
+  "h": 400,
+  "bytes": 15086
+ },
+ {
+  "file": "clients/artem-lyundovskyy.jpg",
+  "alt": "Артем Люндовський",
+  "caption": "Артем Люндовський Засновник M99 — креативна студія відеопродакшину",
+  "w": 400,
+  "h": 400,
+  "bytes": 20715
+ },
+ {
+  "file": "logos/motion99.png",
+  "alt": "MOTION99",
+  "caption": "Артем Люндовський Засновник M99 — креативна студія відеопродакшину",
+  "w": 297,
+  "h": 80,
+  "bytes": 21620
+ },
+ {
+  "file": "clients/andriy-smal.jpg",
+  "alt": "Андрій Смаль",
+  "caption": "Андрій Смаль Засновник ItUa — нішеві CRM/ERP/AI-рішення",
+  "w": 400,
+  "h": 400,
+  "bytes": 24209
+ },
+ {
+  "file": "logos/itua.png",
+  "alt": "ItUa",
+  "caption": "Андрій Смаль Засновник ItUa — нішеві CRM/ERP/AI-рішення",
+  "w": 171,
+  "h": 80,
+  "bytes": 5908
+ },
+ {
+  "file": "clients/ivan-pervoy.jpg",
+  "alt": "Іван Первой",
+  "caption": "Іван Первой Засновник середовища для підлітків",
+  "w": 400,
+  "h": 400,
+  "bytes": 22334
+ },
+ {
+  "file": "logos/forge.png",
+  "alt": "Forge",
+  "caption": "Іван Первой Засновник середовища для підлітків",
+  "w": 80,
+  "h": 67,
+  "bytes": 1966
+ },
+ {
+  "file": "clients/ira-vakhitova.jpg",
+  "alt": "Іра Вахітова",
+  "caption": "Іра Вахітова Співзасновниця платформи онлайн-освіти New Look School, інфлуенсерка, маркетологиня",
+  "w": 400,
+  "h": 400,
+  "bytes": 31679
+ },
+ {
+  "file": "logos/new-look-school.png",
+  "alt": "New Look School",
+  "caption": "Іра Вахітова Співзасновниця платформи онлайн-освіти New Look School, інфлуенсерка, маркетологиня",
+  "w": 300,
+  "h": 63,
+  "bytes": 12244
+ },
+ {
+  "file": "clients/yuriy-hladkyy.jpg",
+  "alt": "Юрій Гладкий",
+  "caption": "Юрій Гладкий Засновник маркетингової агенції GRAPE; співзасновник селища Kryla Karpaty by Edem; засновник програми Titanium Marketing для підприємців",
+  "w": 400,
+  "h": 400,
+  "bytes": 18810
+ },
+ {
+  "file": "logos/grape.png",
+  "alt": "GRAPE",
+  "caption": "Юрій Гладкий Засновник маркетингової агенції GRAPE; співзасновник селища Kryla Karpaty by Edem; засновник програми Titanium Marketing для підприємців",
+  "w": 300,
+  "h": 71,
+  "bytes": 17463
+ },
+ {
+  "file": "logos/kryla-karpaty-by-edem.png",
+  "alt": "Kryla Karpaty by Edem",
+  "caption": "Юрій Гладкий Засновник маркетингової агенції GRAPE; співзасновник селища Kryla Karpaty by Edem; засновник програми Titanium Marketing для підприємців",
+  "w": 256,
+  "h": 90,
+  "bytes": 9247
+ },
+ {
+  "file": "brand/founder-nazarii-rybinskyi.jpg",
+  "alt": "Назарій Рибінський",
+  "caption": "",
+  "w": 460,
+  "h": 575,
+  "bytes": 27108
+ },
+ {
+  "file": "brand/cert-138598.jpg",
+  "alt": "Свідоцтво про реєстрацію авторського права №138598",
+  "caption": "",
+  "w": 520,
+  "h": 304,
+  "bytes": 29801
+ },
+ {
+  "file": "brand/cert-140162.jpg",
+  "alt": "Свідоцтво IFA BOOTCAMP №140162",
+  "caption": "Наших радників ми готуємо за власною програмою «IFA BOOTCAMP» — технологією, яку створив засновник. Те, що згодом працює з клієнтами, спершу опановує команда. Захищено авторським правом · Свідоцтво № 140162 IFA BOOTCAMP · № 140162",
+  "w": 520,
+  "h": 296,
+  "bytes": 28052
+ }
+]
