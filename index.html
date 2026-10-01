@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Зарплата власника: калькулятор і розбір з радником | BRAVE Capital</title>
-<meta name="description" content="Порахуйте за 3 хвилини, скільки бізнес може платити вам щомісяця без шкоди обороту. Розбір результату з фінансовим радником — 20 хвилин, безкоштовно.">
+<meta name="description" content="Порахуйте за 3 хвилини, скільки бізнес може платити вам щомісяця без шкоди обороту. Розбір вашої ситуації з фінансовим радником — безкоштовно.">
 <meta name="robots" content="noindex">
 <meta property="og:title" content="Скільки бізнес може платити вам щомісяця?">
 <meta property="og:description" content="Калькулятор зарплати власника від BRAVE Capital — 3 хвилини, результат одразу.">
@@ -247,6 +247,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .cbox .btn:hover{background:var(--paper)}
 .cbox .linkbtn{color:#fff}
 .cbox__row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px}
+.cbox + details{margin-top:18px}
 
 /* HOW */
 .steps{list-style:none;margin:40px 0 0;padding:0;display:grid;gap:14px;counter-reset:s}
@@ -362,7 +363,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 /* FREE & SAFE */
 .free{display:grid;gap:14px;margin-top:40px}
-@media (min-width:900px){ .free{grid-template-columns:repeat(4,1fr);gap:16px} }
+@media (min-width:900px){ .free{grid-template-columns:repeat(3,1fr);gap:16px} }
 .free article{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px 22px;display:flex;flex-direction:column;gap:10px}
 .free .when{font:600 12px/1.3 var(--f-label);letter-spacing:.06em;color:var(--blue);text-transform:uppercase}
 .free p{margin:0;font-size:15.5px;color:var(--ink-2)}
@@ -501,7 +502,7 @@ body.modal-open{overflow:hidden}
       <p class="lead">BRAVE — особистий фінансовий директор власника. Визначаємо вашу зарплату з бізнесу, відокремлюємо гроші родини від обороту, збираємо резерв і гроші поза бізнесом. Облік і рутину ведемо за вас.</p>
       <div class="hero__cta">
         <a class="btn" href="#calc" data-track="hero_calc">Порахувати мою зарплату власника · 3 хв <span class="arr">→</span></a>
-        <button type="button" class="linkbtn" data-lead="hero">або одразу записатися на розбір</button>
+        <button type="button" class="linkbtn" data-lead="hero">або одразу записатися на розбір з радником</button>
       </div>
       <p class="hero__micro">Без реєстрації · відповіді діапазонами · результат одразу на екрані</p>
       <div class="trust">
@@ -620,12 +621,11 @@ body.modal-open{overflow:hidden}
     <h2 class="h2">П'ять кроків&nbsp;— <span class="blue">і перші три безкоштовні</span></h2>
     <ol class="steps">
       <li><div class="top"><span class="n">01</span><span class="tag">безкоштовно</span></div><h3>Калькулятор</h3><span class="t">3 хвилини</span><p>Ваша орієнтовна зарплата власника і правило розподілу прибутку.</p></li>
-      <li><div class="top"><span class="n">02</span><span class="tag">безкоштовно</span></div><h3>Розбір результату</h3><span class="t">20 хвилин онлайн</span><p>Радник перевіряє цифри й відповідає на 3 питання з вашого розрахунку.</p></li>
-      <li><div class="top"><span class="n">03</span><span class="tag">безкоштовно</span></div><h3>Діагностика</h3><span class="t">75 хвилин</span><p>Повна карта ваших грошей: рахунки, доходи, витрати, резерви, зобов'язання. Після неї — персональна пропозиція з прозорою ціною.</p></li>
-      <li class="paid"><div class="top"><span class="n">04</span></div><h3>Стратегія</h3><span class="t">перший тиждень</span><p>Якщо вирішите продовжити: план на 12 місяців із сумами й датами.</p></li>
+      <li><div class="top"><span class="n">02</span><span class="tag">безкоштовно</span></div><h3>Знайомство</h3><span class="t">коротка розмова</span><p>Менеджер BRAVE зв'яжеться в зручному месенджері, уточнить ваш запит і підбере час з радником.</p></li>
+      <li><div class="top"><span class="n">03</span><span class="tag">безкоштовно</span></div><h3>Розбір ситуації</h3><span class="t">онлайн, 1-на-1 з радником</span><p>Радник детально розбирається у вашому запиті й грошах: рахунки, доходи, витрати, резерви, зобов'язання. Після розбору — персональна пропозиція з прозорою ціною.</p></li>
+      <li class="paid"><div class="top"><span class="n">04</span></div><h3>Стратегія</h3><span class="t">перший тиждень</span><p>Якщо вирішите працювати разом: план на 12 місяців із сумами й датами.</p></li>
       <li class="paid"><div class="top"><span class="n">05</span></div><h3>Запуск і ритм</h3><span class="t">перший місяць і далі</span><p>Розділення рахунків, зарплата власника, резерв. Далі — закриття кожного місяця і перегляд «план / факт» щокварталу.</p></li>
     </ol>
-    <p class="foot-note">«Ціна — не питання першої зустрічі. Спершу ми розбираємось, чи можемо допомогти.»</p>
   </div>
 </section>
 
@@ -643,13 +643,13 @@ body.modal-open{overflow:hidden}
     <!-- mid-page form #1 -->
     <div class="band" id="lead-results">
       <div>
-        <p class="eyebrow">Розбір · 20 хвилин онлайн</p>
-        <h2 class="band__h">Де у вас «застрягають» гроші? <span>Розберемо за 20 хвилин</span></h2>
-        <p class="band__lead">Радник BRAVE подивиться на вашу ситуацію, відповість на питання і чесно скаже, чи є сенс іти далі. Безкоштовно і без зобов'язань.</p>
+        <p class="eyebrow">Розбір ситуації · онлайн, 1-на-1</p>
+        <h2 class="band__h">Де у вас «застрягають» гроші? <span>Розберемо з радником</span></h2>
+        <p class="band__lead">Фінансовий радник BRAVE детально розбереться у вашій ситуації: гроші бізнесу й родини, резерви, зобов'язання, цілі. Безкоштовно.</p>
         <ul class="band__list">
           <li>Калькулятор не обов'язковий — можна записатися одразу</li>
-          <li>Досить діапазонів: без виписок і точних сум</li>
-          <li>Ціна — не питання першої зустрічі</li>
+          <li>Виписки не потрібні</li>
+          <li>Спершу менеджер уточнить ваш запит і підбере зручний час</li>
         </ul>
         <div class="band__alt"><a class="linkbtn" href="#calc" data-track="band_results_calc">або спершу порахувати зарплату власника · 3 хв</a></div>
       </div>
@@ -702,10 +702,10 @@ body.modal-open{overflow:hidden}
       <div>
         <p class="eyebrow">Запис на розбір</p>
         <h2 class="band__h">Рекомендація <span>не потрібна</span></h2>
-        <p class="band__lead">Раніше до BRAVE приходили лише від знайомих клієнтів. Тепер можна напряму: 20 хвилин онлайн з радником, 1-на-1. Усе, що ви розповідаєте, лишається між вами і радником.</p>
+        <p class="band__lead">Раніше до BRAVE приходили лише від знайомих клієнтів. Тепер можна напряму: розбір вашої ситуації з радником, онлайн і 1-на-1. Усе, що ви розповідаєте, лишається між вами і радником.</p>
         <ul class="band__list">
-          <li>На першій розмові нічого не продаємо</li>
-          <li>Після розмови вирішуєте ви: іти далі чи ні</li>
+          <li>Розбір безкоштовний</li>
+          <li>Після розбору вирішуєте ви: працювати разом чи ні</li>
         </ul>
         <div class="faces">
           <div class="faces__row" aria-hidden="true">
@@ -727,14 +727,13 @@ body.modal-open{overflow:hidden}
 <section class="sec sec--white" id="free">
   <div class="wrap">
     <p class="eyebrow"><b>08</b> Перший крок</p>
-    <h2 class="h2">Що ви отримаєте, <span class="blue">нічого не купуючи</span></h2>
+    <h2 class="h2">Що ви отримаєте <span class="blue">безкоштовно</span></h2>
     <div class="free">
       <article><span class="when">Одразу на екрані</span><h3 class="h3">Ваш розрахунок</h3><p>Зарплата власника, правило розподілу прибутку, запас міцності родини і гроші поза бізнесом через 12 місяців.</p></article>
-      <article><span class="when">20 хвилин</span><h3 class="h3">Розбір результату</h3><p>Радник перевіряє цифри і відповідає на 3 питання, які калькулятор зібрав з ваших відповідей.</p></article>
-      <article><span class="when">75 хвилин</span><h3 class="h3">Діагностика</h3><p>Якщо захочете продовжити: повна карта ваших грошей — 11 блоків питань про рахунки, доходи, витрати, резерви й зобов'язання.</p></article>
+      <article><span class="when">Онлайн, 1-на-1</span><h3 class="h3">Розбір ситуації з радником</h3><p>Повна карта ваших грошей: рахунки, доходи, витрати, резерви й зобов'язання. І відповіді на 3 питання з вашого розрахунку.</p></article>
       <article><span class="when">Бонус</span><h3 class="h3">Тест 4 фінансових компетенцій</h3><p>Заробляти, витрачати, накопичувати, примножувати — <span class="todo" title="ПІДТВЕРДИТИ формат і посилання">що з цього у вас сильне, а що варто підтягнути.</span></p></article>
     </div>
-    <p class="anchor">Власники роками відкладають «розібратися з фінансами». Карта грошей після діагностики — та сама точка, з якої почалися 900+ стратегій BRAVE PLAN.</p>
+    <p class="anchor">Власники роками відкладають «розібратися з фінансами». Карта грошей після розбору — та сама точка, з якої почалися 900+ стратегій BRAVE PLAN.</p>
     <p style="margin:24px 0 0"><a class="btn" href="#calc" data-track="free_calc">Почати з калькулятора <span class="arr">→</span></a></p>
   </div>
 </section>
@@ -744,10 +743,10 @@ body.modal-open{overflow:hidden}
   <div class="wrap">
     <p class="eyebrow"><b>09</b> Без ризику для вас</p>
     <p class="between">Між <span>нами</span></p>
-    <p class="lead">Без зобов'язань і без зайвих питань. Приватність — база нашої роботи: гроші, активи, рішення — все, що ви розповідаєте, лишається між вами і радником.</p>
+    <p class="lead">Приватність — база нашої роботи: гроші, активи, рішення — все, що ви розповідаєте, лишається між вами і радником.</p>
     <div class="safe">
-      <article><h3>Нічого не продаємо на першій розмові</h3><p>Ціна — не питання першої зустрічі. <span class="todo" title="ПІДТВЕРДИТИ з відділом продажів">Розбір і діагностика безкоштовні й ні до чого не зобов'язують.</span></p></article>
-      <article><h3>Виписки не потрібні</h3><p>Досить діапазонів. Точні цифри — лише тоді, коли ви самі вирішите.</p></article>
+      <article><h3>Розбір безкоштовний</h3><p>Розбір ситуації з радником нічого не коштує. Чи працювати разом далі, вирішуєте ви.</p></article>
+      <article><h3>Виписки не потрібні</h3><p>Для початку досить того, що ви знаєте самі. Точні цифри — лише тоді, коли ви вирішите.</p></article>
       <article><h3>Тільки 1-на-1</h3><p>Ми не ділимось даними клієнтів і не використовуємо їх поза роботою. <span class="todo" title="ПІДТВЕРДИТИ наявність шаблону NDA">NDA — за запитом.</span></p></article>
       <article><h3>Гроші — на ваших рахунках</h3><p><span class="todo" title="ПІДТВЕРДИТИ">Ми не приймаємо кошти клієнтів на свої рахунки.</span> Рішення ухвалюєте ви.</p></article>
       <article><h3>Без оцінок і лекцій</h3><p>Ми не вчимо економити і не оцінюємо. Допомагаємо побачити картину і зібрати систему.</p></article>
@@ -761,12 +760,12 @@ body.modal-open{overflow:hidden}
     <div>
       <p class="eyebrow"><b>10</b> Почнімо</p>
       <h2 class="h2">Скільки років ви вже кажете: <span class="blue">«треба нарешті розібратися з фінансами»?</span></h2>
-      <p class="lead">Почніть із 3 хвилин. Порахуйте свою зарплату власника — і розберіть результат з радником.</p>
+      <p class="lead">Почніть із 3 хвилин. Порахуйте свою зарплату власника — і розберіть свою ситуацію з фінансовим радником.</p>
       <a class="btn" href="#calc" data-track="final_calc">Порахувати мою зарплату власника <span class="arr">→</span></a>
     </div>
     <div class="formcard">
       <h3>Вже вирішили?</h3>
-      <p class="muted" style="margin:0 0 20px">Запишіться на 20-хвилинний розбір без калькулятора. Радник зв’яжеться з вами так, як вам зручно.</p>
+      <p class="muted" style="margin:0 0 20px">Запишіться на розбір без калькулятора. Менеджер BRAVE зв’яжеться з вами так, як вам зручно, і підбере час з радником.</p>
       <div data-form-slot="final" data-fid="f"></div>
     </div>
   </div>
@@ -782,7 +781,7 @@ body.modal-open{overflow:hidden}
       <details><summary>Радник — це коли грошей стане більше. Мені ще рано.</summary><div class="a"><p>Радник потрібен не від суми, а з моменту, коли грошей, рахунків і рішень стало більше, ніж хочеться тримати в голові. Що раніше з'являється система, то менше грошей «розчиняється» по дорозі.</p><p>Один із власників сказав нам: <q>Зрозумів, що міг би мати фінансового радника набагато раніше. Це була помилка — не делегувати раніше</q>.</p></div></details>
       <details><summary>Зараз гроші потрібніші в бізнесі.</summary><div class="a"><p>Бізнес — сильний актив, і ми не забираємо гроші з обороту: зарплата власника рахується з урахуванням потреб бізнесу, калькулятор це показує. Але коли все в одному бізнесі, родина залежить від одного ризику. Невелика регулярна частина поза бізнесом — опора і для вас, і для самої справи.</p><p>Олена Погляд, засновниця VOIR: <q>Раніше вільні гроші просто лежали в бізнесі. Тепер я розумію: робота з капіталом — окрема справа, і я більше її не уникаю</q>.</p></div></details>
       <details><summary>У мене вже є бухгалтер і фіндиректор.</summary><div class="a"><p>І це добре. Бухгалтер відповідає за податки й звітність бізнесу, фіндиректор — за гроші компанії. За гроші власника і родини зазвичай не відповідає ніхто. Ми працюємо з вашою командою, а не замість неї.</p><p>Навіть власниця бухгалтерського аутсорсу розповідала нам: <q>Навчаю інших розділяти фінанси, але сама не встигаю це робити</q>.</p></div></details>
-      <details><summary>Я не хочу нікому показувати свої доходи.</summary><div class="a"><p>Розуміємо: багато власників не розповідають про доходи нікому, крім партнера. Тому калькулятор і перша розмова — лише на діапазонах. Працюємо тільки 1-на-1, усе сказане лишається між вами і радником. <span class="todo" title="ПІДТВЕРДИТИ">NDA — за запитом, доступ до ваших рахунків на старті не потрібен.</span></p></div></details>
+      <details><summary>Я не хочу нікому показувати свої доходи.</summary><div class="a"><p>Розуміємо: багато власників не розповідають про доходи нікому, крім партнера. Тому калькулятор працює на діапазонах, а на розборі ви самі вирішуєте, які цифри називати. Працюємо тільки 1-на-1, усе сказане лишається між вами і радником. <span class="todo" title="ПІДТВЕРДИТИ">NDA — за запитом, доступ до ваших рахунків на старті не потрібен.</span></p></div></details>
     </div>
   </div>
 </section>
@@ -806,7 +805,7 @@ body.modal-open{overflow:hidden}
   <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="mTitle">
     <button class="modal__close" type="button" data-close aria-label="Закрити">×</button>
     <h3 id="mTitle">Записатися на розбір</h3>
-    <p class="fsub" id="mSub">20 хвилин онлайн з радником BRAVE. Безкоштовно і без зобов'язань.</p>
+    <p class="fsub" id="mSub">Розбір вашої ситуації з фінансовим радником BRAVE: онлайн, 1-на-1, безкоштовно.</p>
     <div data-form-slot="modal" data-fid="m"></div>
   </div>
 </div>
@@ -1064,6 +1063,8 @@ function result(fresh){
     h += '<div class="rb"><h3 class="q" style="margin:0">Через 12 місяців поза бізнесом</h3><p class="big">≈ ' + money(c.T12) + '</p><p>' + sub + ' Без жодних інвестиційних припущень: тільки регулярність.</p></div>';
   }
   h += '<div class="rb"><h3 class="q" style="margin:0">3 питання для розбору з радником</h3><ol class="qs">' + questions(a, c).map(function(t){ return '<li>' + esc(t) + '</li>'; }).join("") + '</ol></div>';
+  h += '<div class="cbox"><h3>Розберіть свою ситуацію з фінансовим радником</h3><p>Калькулятор рахує за діапазонами і бачить лише частину картини. Радник детально розбереться у вашій ситуації — гроші бізнесу й родини, резерви, зобов’язання — і відповість на ці 3 питання. Онлайн, 1-на-1, безкоштовно.</p>' +
+       '<div class="cbox__row"><button type="button" class="btn" id="cLead">Записатися на розбір <span class="arr">→</span></button><button type="button" class="linkbtn" id="cAgain">Перерахувати</button></div></div>';
   h += '<details><summary>Як ми рахували</summary><ol>' +
        '<li><b>Частка власника</b> — прибуток мінус частина на оборот і розвиток і мінус резерв бізнесу (10–15%, залежно від того, наскільки просідають слабкі місяці).</li>' +
        '<li><b>Зарплата власника</b> — 50–80% частки власника. Що сильніше просідають слабкі місяці, то обережніша сума.</li>' +
@@ -1073,13 +1074,12 @@ function result(fresh){
        '<li><b>Ціль запасу міцності</b> — 6 місяців витрат родини, або 9, якщо бувають місяці з нулем.</li>' +
        '<li><b>Інвестиційний дохід не враховуємо.</b> Податки на виплати собі (наприклад, на дивіденди) теж не враховано — це питання до бухгалтера.</li>' +
        '</ol><p>Це орієнтир за вашими відповідями в діапазонах, а не індивідуальна фінансова, податкова чи інвестиційна рекомендація.</p></details>';
-  h += '<div class="cbox"><h3>Розберіть свій результат за 20 хвилин</h3><p>Радник BRAVE перевірить цифри і відповість на ці 3 питання. Онлайн, безкоштовно, без зобов’язань.</p>' +
-       '<div class="cbox__row"><button type="button" class="btn" id="cLead">Розібрати мій результат <span class="arr">→</span></button><button type="button" class="linkbtn" id="cAgain">Перерахувати</button></div></div>';
   paint(h, fresh ? ".eyebrow" : null);
   $("#cLead").onclick = function(){
     track("cta_breakdown_click", {lead_tag: c.tag});
-    openModal({title:"Розберіть свій результат за 20 хвилин", sub:"Радник перевірить ваш розрахунок і відповість на 3 питання. Онлайн, безкоштовно, без зобов’язань.", source:"calc"});
+    openModal(CALC_LEAD);
   };
+  stickToLead();
   var fix = $("#cFix");
   if (fix) fix.onclick = function(){ track("calc_fix_profit"); st.done = false; st.fix = true; st.step = 0; save(); step(); };
   $("#cAgain").onclick = function(){ st = {a:{}, step:0, done:false, started:true}; save(); step(); };
@@ -1162,7 +1162,7 @@ function formHTML(fid, source){
       chip("time", "morning", "Зранку") + chip("time", "day", "Вдень") + chip("time", "evening", "Увечері") +
     '</div></div>' +
     '<button type="submit" class="btn btn--block">Записатися на розбір <span class="arr">→</span></button>' +
-    '<p class="form__legal">Натискаючи кнопку, ви погоджуєтеся з <a href="#" class="todo" title="ПІДТВЕРДИТИ посилання">Політикою конфіденційності</a>. Радник зв’яжеться з вами протягом <span class="todo" title="ПІДТВЕРДИТИ SLA">робочого дня</span>. Жодних розсилок.</p>' +
+    '<p class="form__legal">Натискаючи кнопку, ви погоджуєтеся з <a href="#" class="todo" title="ПІДТВЕРДИТИ посилання">Політикою конфіденційності</a>. Менеджер BRAVE зв’яжеться з вами протягом <span class="todo" title="ПІДТВЕРДИТИ SLA">робочого дня</span>. Жодних розсилок.</p>' +
     '</form><div class="form__ok" data-ok></div>';
 }
 document.querySelectorAll("[data-form-slot]").forEach(function(slot){
@@ -1185,9 +1185,11 @@ function closeModal(){
 }
 modal.addEventListener("click", function(e){ if (e.target.hasAttribute("data-close")) closeModal(); });
 document.addEventListener("keydown", function(e){ if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+var LEAD_SUB = "Розбір вашої ситуації з фінансовим радником BRAVE: онлайн, 1-на-1, безкоштовно. Спершу менеджер уточнить ваш запит і підбере зручний час.";
+var CALC_LEAD = {title:"Розбір вашої ситуації з радником", sub:"Радник детально розбереться у ваших грошах і відповість на 3 питання з розрахунку. Онлайн, 1-на-1, безкоштовно. Спершу менеджер BRAVE уточнить запит і підбере зручний час.", source:"calc"};
 document.querySelectorAll("[data-lead]").forEach(function(b){
   b.addEventListener("click", function(){
-    openModal({title:"Записатися на розбір", sub:"20 хвилин онлайн з радником BRAVE: подивимось на ваші гроші і скажемо чесно, чи є сенс іти далі. Безкоштовно і без зобов’язань.", source: b.getAttribute("data-lead")});
+    openModal({title:"Записатися на розбір", sub: LEAD_SUB, source: b.getAttribute("data-lead")});
   });
 });
 document.querySelectorAll("[data-track]").forEach(function(a){ a.addEventListener("click", function(){ track("cta_click", {cta: a.getAttribute("data-track")}); }); });
@@ -1222,7 +1224,7 @@ document.querySelectorAll("[data-form]").forEach(function(form){
     if (!validate(form)) return;
     var phone = form.querySelector('[name="phone"]'), iti = itiMap[phone.id];
     var source = form.getAttribute("data-source") === "modal" ? mSource : form.getAttribute("data-source");
-    var calc = source === "calc" ? calcHidden() : null;
+    var calc = st.done ? calcHidden() : null;   // розрахунок іде з будь-якої форми: менеджеру він потрібен для кваліфікації
     var lead = {
       name: form.name.value.trim(),
       phone: iti ? iti.getNumber() : phone.value.trim(),                   // E.164
@@ -1241,8 +1243,8 @@ document.querySelectorAll("[data-form]").forEach(function(form){
       if (window.console) console.info("[lead → CRM]", lead);
       track("lead_submit", {source: source, lead_tag: lead.lead_tag, event_id: lead.event_id});   // у Meta — лише тег, без фінансових діапазонів
       var ok = form.parentElement.querySelector("[data-ok]"), ch = {telegram:"Telegram", whatsapp:"WhatsApp", viber:"Viber"}[lead.channel];
-      ok.innerHTML = '<h3>Дякуємо, ' + esc(lead.name) + '!</h3><p>' + (ch ? "Радник BRAVE напише вам у " + ch + " протягом робочого дня." : "Радник BRAVE зателефонує вам протягом робочого дня" + (lead.time ? ", " + TIME_LABEL[lead.time] + "." : ".")) + '</p>' +
-        '<p style="margin-top:16px;font-weight:600">Як пройде розбір (20 хвилин):</p><ul><li>5 хв — перевіримо ваш розрахунок або коротко подивимось на ситуацію;</li><li>10 хв — відповімо на ваші питання;</li><li>5 хв — чесно скажемо, чи є сенс іти далі — на 75-хвилинну діагностику.</li></ul>';
+      ok.innerHTML = '<h3>Дякуємо, ' + esc(lead.name) + '!</h3><p>' + (ch ? "Менеджер BRAVE напише вам у " + ch + " протягом робочого дня." : "Менеджер BRAVE зателефонує вам протягом робочого дня" + (lead.time ? ", " + TIME_LABEL[lead.time] + "." : ".")) + '</p>' +
+        '<p style="margin-top:16px;font-weight:600">Що далі:</p><ul><li>менеджер уточнить кілька деталей про ваш запит і підбере зручний час для розбору;</li><li>радник онлайн, 1-на-1, детально розбереться у вашій ситуації' + (calc ? " і відповість на 3 питання з вашого розрахунку" : "") + '.</li></ul>';
       form.hidden = true; ok.classList.add("show");
     });
   });
@@ -1288,6 +1290,13 @@ var faqs = document.querySelectorAll(".faq details");
 faqs.forEach(function(d){ d.addEventListener("toggle", function(){ if (d.open) faqs.forEach(function(o){ if (o !== d) o.open = false; }); }); });
 
 var stick = $("#stick"), calcSec = $("#calc"), heroCta = $(".hero__cta");
+/* після розрахунку липка кнопка веде вже не в калькулятор, а на запис до радника */
+function stickToLead(){
+  if (stick.getAttribute("data-mode") === "lead") return;
+  stick.setAttribute("data-mode", "lead");
+  stick.innerHTML = '<button type="button" class="btn btn--block">Записатися на розбір <span class="arr">→</span></button>';
+  stick.querySelector("button").onclick = function(){ track("cta_click", {cta: "sticky_lead"}); openModal(CALC_LEAD); };
+}
 if ("IntersectionObserver" in window){
   var vis = {calc:false, hero:true}, formsOnScreen = new Set();
   var upd = function(){ stick.classList.toggle("show", !vis.calc && !vis.hero && formsOnScreen.size === 0); };
